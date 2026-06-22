@@ -18,6 +18,56 @@
 
   <!-- Favicon — matches GeoInsider logo -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000000'/><circle cx='16' cy='16' r='11' fill='white'/><rect x='8' y='12' width='16' height='3' rx='1.5' fill='black' transform='rotate(-20 16 16)'/><rect x='8' y='16.5' width='16' height='3' rx='1.5' fill='black' transform='rotate(-20 16 16)'/><rect x='8' y='21' width='16' height='3' rx='1.5' fill='black' transform='rotate(-20 16 16)'/><circle cx='16' cy='16' r='11' fill='none' stroke='black' stroke-width='1.5'/></svg>" />
+
+<style id="filter-styles">
+/* ── Case study filter bar ── */
+.case-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+.case-filter__btn {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-interactive);
+}
+.case-filter__btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.case-filter__btn.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+[data-theme="dark"] .case-filter__btn.is-active {
+  color: #121110;
+}
+/* hidden card during filter */
+.case-card.is-hidden {
+  display: none !important;
+}
+/* empty-state message */
+.case-grid__empty {
+  display: none;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-16) 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+.case-grid__empty.is-visible { display: block; }
+</style>
 </head>
 
 <body>
@@ -129,6 +179,8 @@
         </div>
       </div>
 
+      <p class="case-grid__empty" id="case-grid-empty">No articles match this filter.</p>
+    
     </div>
   </div>
 </section>
@@ -146,10 +198,21 @@
       <p class="section-desc">Deep-dive investigations into conflicts, military strategy, and geopolitical risk across every region — reconstructed from open sources.</p>
     </div>
 
-    <div class="case-grid">
+
+    <!-- ── Filter bar ── -->
+    <div class="case-filter" id="case-filter" aria-label="Filter articles by topic">
+      <button class="case-filter__btn is-active" data-filter="all">All</button>
+      <button class="case-filter__btn" data-filter="iran-usa">Iran-USA</button>
+      <button class="case-filter__btn" data-filter="nato">NATO</button>
+      <button class="case-filter__btn" data-filter="asia">Asia</button>
+      <button class="case-filter__btn" data-filter="energy">Energy</button>
+      <button class="case-filter__btn" data-filter="disinformation">Disinformation</button>
+    </div>
+
+    <div class="case-grid" id="case-grid">
 
       <!-- Featured — highest engagement -->
-      <article class="case-card case-card--featured reveal" onclick="window.location.href='case-studies/bioweapons-disinfo.html'" style="cursor:pointer;">
+      <article data-tags="disinformation" class="case-card case-card--featured reveal" onclick="window.location.href='case-studies/bioweapons-disinfo.html'" style="cursor:pointer;">
         <div class="case-tag">OSINT · Disinformation</div>
         <h3>Russian Propaganda vs. US Intelligence: Debunking the Bioweapons Labs Claim</h3>
         <p>A US intelligence document was circulating as "proof" of American bioweapons labs in Ukraine. The document is real — what it actually says is the opposite. A step-by-step OSINT walkthrough.</p>
@@ -160,7 +223,7 @@
       </article>
 
       <!-- Card 2 -->
-      <article class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/iran-nuclear.html'" style="cursor:pointer;">
+      <article data-tags="iran-usa" class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/iran-nuclear.html'" style="cursor:pointer;">
         <div class="case-tag">Iran · Nuclear</div>
         <h3>Iran's Nuclear Program: How It Works, Key Sites & What Happens If Attacked</h3>
         <p>Structure, key facilities, enrichment levels, and the strategic implications of a military strike — all mapped from open sources.</p>
@@ -171,7 +234,7 @@
       </article>
 
       <!-- Card 3 -->
-      <article class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/cambodia-thailand.html'" style="cursor:pointer;">
+      <article data-tags="asia" class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/cambodia-thailand.html'" style="cursor:pointer;">
         <div class="case-tag">Asia · Border Conflict</div>
         <h3>Cambodia vs. Thailand: Border Tensions, History, and What's Really at Stake</h3>
         <p>Soldier clashes, closed checkpoints, leaked calls — to understand the current crisis you need the full historical context. A 24-part deep dive.</p>
@@ -182,7 +245,7 @@
       </article>
 
       <!-- Card 4 -->
-      <article class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/nato-drones.html'" style="cursor:pointer;">
+      <article data-tags="nato" class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/nato-drones.html'" style="cursor:pointer;">
         <div class="case-tag">NATO · Air Defense</div>
         <h3>Over Denmark and Poland: NATO's Drone Defense Reality</h3>
         <p>Russian drone violations of NATO airspace and the uncomfortable truth about the alliance's current drone defense capabilities.</p>
@@ -193,7 +256,7 @@
       </article>
 
       <!-- Card 5 -->
-      <article class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/baltic-defense.html'" style="cursor:pointer;">
+      <article data-tags="nato" class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/baltic-defense.html'" style="cursor:pointer;">
         <div class="case-tag">NATO · Baltics</div>
         <h3>The Baltic Defense Problem: How Estonia, Latvia & Lithuania Are Preparing</h3>
         <p>The 2016 RAND simulation showed Russian forces could reach Tallinn or Riga in 60–72 hours. What has changed since? A breakdown of Baltic defense posture.</p>
@@ -204,7 +267,7 @@
       </article>
 
       <!-- Card 6 -->
-      <article class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/china-iran.html'" style="cursor:pointer;">
+      <article data-tags="iran-usa asia" class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/china-iran.html'" style="cursor:pointer;">
         <div class="case-tag">China · Iran</div>
         <h3>How China Is Actually Helping Iran in This War</h3>
         <p>The US Navy intercepted the Iranian container ship MV Touska. A look at how China uses civilian and commercial channels to provide strategic support to Iran.</p>
@@ -215,7 +278,7 @@
       </article>
 
       <!-- Card 7 -->
-      <article class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/rare-earths.html'" style="cursor:pointer;">
+      <article data-tags="asia" class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/rare-earths.html'" style="cursor:pointer;">
         <div class="case-tag">Resources · China</div>
         <h3>Rare Earths: Abundant Resources, Strategic Dependencies</h3>
         <p>Despite widespread global deposits, China dominates rare earth refining. The technology, the geography, and the geopolitical leverage explained.</p>
@@ -226,7 +289,7 @@
       </article>
 
       <!-- Card 8 -->
-      <article class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/arctic.html'" style="cursor:pointer;">
+      <article data-tags="nato" class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/arctic.html'" style="cursor:pointer;">
         <div class="case-tag">Arctic · NATO</div>
         <h3>The European Arctic: A Cold Battleground for NATO and Russia</h3>
         <p>Military competition in the High North — where NATO and Russia are vying for strategic dominance in one of the world's most contested and underreported regions.</p>
@@ -237,7 +300,7 @@
       </article>
 
       <!-- Card 9 -->
-      <article class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/romania-blacksea.html'" style="cursor:pointer;">
+      <article data-tags="energy nato" class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/romania-blacksea.html'" style="cursor:pointer;">
         <div class="case-tag">Energy · NATO</div>
         <h3>Romania's Black Sea Gas Project: The EU's Largest and NATO's Grey Zone</h3>
         <p>Romania is building Neptune Deep — the EU's largest gas project. It sits in a NATO grey zone that the alliance cannot afford to ignore.</p>
@@ -247,7 +310,7 @@
         </div>
       </article>
 
-      <article class="case-card case-card--featured reveal" onclick="window.location.href='case-studies/russia-china-iran-triangle.html'" style="cursor:pointer;">
+      <article data-tags="iran-usa asia" class="case-card case-card--featured reveal" onclick="window.location.href='case-studies/russia-china-iran-triangle.html'" style="cursor:pointer;">
         <div class="case-tag">Strategic Analysis</div>
         <h3>The Russia-China-Iran Triangle</h3>
         <p>What 74 days of the Iran war reveal about Russia's $9B/month windfall, China's discounted oil play, and Iran's role as the shared infrastructure of the axis.</p>
@@ -257,7 +320,7 @@
         </div>
       </article>
 
-      <article class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/space-force-iran.html'" style="cursor:pointer;">
+      <article data-tags="iran-usa" class="case-card reveal reveal-delay-1" onclick="window.location.href='case-studies/space-force-iran.html'" style="cursor:pointer;">
         <div class="case-tag">Iran War · Space</div>
         <h3>The Space Force Is Fighting Iran. There's Nothing to Show for It.</h3>
         <p>The system that did the most to keep Gulf bases standing runs in geosynchronous orbit — and there is nothing to point a camera at.</p>
@@ -267,7 +330,7 @@
         </div>
       </article>
 
-      <article class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/nato-72-hours-baltic.html'" style="cursor:pointer;">
+      <article data-tags="nato" class="case-card reveal reveal-delay-2" onclick="window.location.href='case-studies/nato-72-hours-baltic.html'" style="cursor:pointer;">
         <div class="case-tag">NATO · Baltic Defense</div>
         <h3>The First 72 Hours: Anatomy of the War NATO Plans to Never Fight</h3>
         <p>A scenario built from public wargames: what a Russian Baltic offensive looks like phase by phase, and where deterrence holds or breaks.</p>
@@ -985,5 +1048,48 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<script id="filter-script">
+(function () {
+  var btns   = document.querySelectorAll('.case-filter__btn');
+  var grid   = document.getElementById('case-grid');
+  var empty  = document.getElementById('case-grid-empty');
+
+  if (!btns.length || !grid) return;
+
+  function applyFilter(filter) {
+    var cards   = grid.querySelectorAll('article[data-tags]');
+    var visible = 0;
+
+    cards.forEach(function (card) {
+      if (filter === 'all') {
+        card.classList.remove('is-hidden');
+        visible++;
+      } else {
+        var tags = (card.getAttribute('data-tags') || '').split(' ');
+        if (tags.indexOf(filter) !== -1) {
+          card.classList.remove('is-hidden');
+          visible++;
+        } else {
+          card.classList.add('is-hidden');
+        }
+      }
+    });
+
+    if (empty) {
+      empty.classList.toggle('is-visible', visible === 0);
+    }
+  }
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btns.forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      applyFilter(btn.getAttribute('data-filter'));
+    });
+  });
+})();
+</script>
+
 </body>
 </html>

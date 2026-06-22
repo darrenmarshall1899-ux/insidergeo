@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K-SWARM: Leonardo and Baykar's First Integrated Flight — GeoInsider</title>
+  <meta property="og:title" content="K-SWARM: Leonardo and Baykar's First Integrated Flight" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.insidergeo.com/img/kswarm/kswarm-1.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+/* ── Article page layout ── */
+.article-hero {
+  padding: var(--space-24) 0 var(--space-16);
+  border-bottom: 1px solid var(--color-divider);
+}
+.article-hero .article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+  transition: color var(--transition-interactive);
+}
+.article-hero .article-back:hover { color: var(--color-primary-hover); }
+.article-hero .article-back svg { flex-shrink: 0; }
+.article-tag {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.article-hero h1 {
+  font-size: var(--text-2xl);
+  line-height: 1.1;
+  margin-bottom: var(--space-6);
+  max-width: 760px;
+}
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+.article-meta .meta-sep { color: var(--color-divider); }
+.article-cover {
+  margin-top: var(--space-12);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  max-height: 480px;
+}
+.article-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Article body ── */
+.article-body {
+  padding: var(--space-16) 0 var(--space-24);
+}
+.article-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* prose block */
+.prose-block {
+  margin-bottom: var(--space-10);
+}
+.prose-block p {
+  font-size: var(--text-base);
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+}
+.prose-block p:last-of-type {
+  margin-bottom: 0;
+}
+.prose-block .prose-img {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface-offset);
+}
+.prose-block .prose-img img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  background: var(--color-surface-offset);
+}
+.prose-img figcaption {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--space-2) var(--space-4);
+}
+
+/* pull quote */
+.pull-quote {
+  border-left: 3px solid var(--color-primary);
+  padding: var(--space-4) var(--space-8);
+  margin: var(--space-10) 0;
+  background: var(--color-primary-subtle);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.pull-quote p {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  color: var(--color-text);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ── Source link ── */
+.article-source {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.article-source a {
+  color: var(--color-primary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.article-source a:hover { color: var(--color-primary-hover); }
+
+/* ── Back / next nav ── */
+.article-nav-bottom {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.article-nav-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: color var(--transition-interactive);
+}
+.article-nav-bottom a:hover { color: var(--color-primary-hover); }
+
+@media (max-width: 640px) {
+  .article-hero h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+  .article-meta { font-size: var(--text-xs); }
+}
+</style>
+  <!-- SEO -->
+  <meta name="description" content="During a test campaign at Baykar's Çorlu facility, a Leonardo M-346FA flew alongside the KIZILELMA UCAV in the first live integrated flight of the K-SWARM program. An important milestone — but not yet an operational loyal-wingman capability." />
+  <meta name="keywords" content="NATO, Europe, Drone, Defense, Italy, Turkey, Leonardo, Baykar, KIZILELMA, K-SWARM" />
+  <link rel="canonical" href="https://www.insidergeo.com/case-studies/kswarm-leonardo-baykar.html" />
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://www.insidergeo.com/case-studies/kswarm-leonardo-baykar.html" />
+  <meta property="og:site_name" content="GeoInsider" />
+  <meta property="og:description" content="During a test campaign at Baykar's Çorlu facility, a Leonardo M-346FA flew alongside the KIZILELMA UCAV in the first live integrated flight of the K-SWARM program. An important milestone — but not yet an operational loyal-wingman capability." />
+  <meta property="article:published_time" content="2026-06-22" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@InsiderGeo" />
+  <meta name="twitter:title" content="K-SWARM: Leonardo and Baykar's First Integrated Flight" />
+  <meta name="twitter:description" content="During a test campaign at Baykar's Çorlu facility, a Leonardo M-346FA flew alongside the KIZILELMA UCAV. An important milestone — but not yet an operational loyal-wingman capability." />
+  <meta name="twitter:image" content="https://www.insidergeo.com/img/kswarm/kswarm-1.jpg" />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "K-SWARM: Leonardo and Baykar's First Integrated Flight",
+    "description": "During a test campaign at Baykar's Çorlu facility, a Leonardo M-346FA flew alongside the KIZILELMA UCAV in the first live integrated flight of the K-SWARM program. An important milestone — but not yet an operational loyal-wingman capability.",
+    "image": "https://www.insidergeo.com/img/kswarm/kswarm-1.jpg",
+    "datePublished": "2026-06-22",
+    "author": {
+      "@type": "Organization",
+      "name": "GeoInsider",
+      "url": "https://www.insidergeo.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GeoInsider",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.insidergeo.com/img/logo.jpg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.insidergeo.com/case-studies/kswarm-leonardo-baykar.html"
+    },
+    "keywords": "NATO, Europe, Drone, Defense, Italy, Turkey, Leonardo, Baykar, KIZILELMA, K-SWARM"
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="GeoInsider Home">
+        <img src="../img/logo.jpg" alt="GeoInsider logo" width="36" height="36" style="border-radius:50%;display:block;flex-shrink:0;" />
+        <span class="nav__logo-text">Geo<span>Insider</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#case-studies">Case Studies</a></li>
+          <li><a href="../index.html#archive">Archive</a></li>
+          <li><a href="../index.html#vision">Vision</a></li>
+          <li><a href="../index.html#reach">Media</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="https://x.com/InsiderGeo" target="_blank" rel="noopener" class="btn-cta" aria-label="Follow GeoInsider on X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.732-8.835L2.25 2.25h7.261l4.261 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Follow
+        </a>
+        <button class="nav__hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <div class="nav__mobile" role="list">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#case-studies">Case Studies</a>
+        <a href="../index.html#archive">Archive</a>
+        <a href="../index.html#vision">Vision</a>
+        <a href="../index.html#reach">Media &amp; Reach</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container container--default">
+      <a href="../index.html#case-studies" class="article-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        All Case Studies
+      </a>
+      <div class="article-tag">NATO · Europe · Drone · Defense</div>
+      <h1>K-SWARM: Leonardo and Baykar's Latest Trial Deserves Attention — But Not Because Europe Suddenly Has a Combat-Ready "Loyal Wingman"</h1>
+      <div class="article-meta">
+        <span>GeoInsider</span>
+        <span class="meta-sep">·</span>
+        <span>Jun 22, 2026</span>
+        <span class="meta-sep">·</span>
+        <span>Originally published on
+          <a href="https://x.com/InsiderGeo/status/2069161540754809191" target="_blank" rel="noopener" style="color:var(--color-primary);font-weight:600;">X / @InsiderGeo</a>
+        </span>
+      </div>
+      <div class="article-cover">
+        <img src="../img/kswarm/kswarm-1.jpg" alt="M-346FA and KIZILELMA in formation during K-SWARM trial at Çorlu" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <section class="article-body">
+    <div class="container container--default">
+      <div class="article-content">
+
+        <div class="prose-block">
+          <p>During the test campaign at Baykar's Çorlu facility, a Leonardo M-346FA flew alongside the KIZILELMA unmanned combat aircraft. KIZILELMA taxied, took off and joined the formation autonomously, while the M-346 crew commanded changes in position, separation and rejoin manoeuvres through a newly integrated avionics and data-link architecture.</p>
+          <p>Two independently developed Italian and Turkish platforms were able to communicate and operate together in live flight, moving the program beyond simulations and corporate presentations.</p>
+        </div>
+
+        <div class="pull-quote">
+          <p>Flying in formation under controlled conditions is very different from operating inside contested airspace.</p>
+        </div>
+
+        <div class="prose-block">
+          <p>There is no public evidence that the system has yet been tested against heavy electronic warfare, degraded communications or modern air defences. Nor have we seen weapons employment, autonomous targeting or one crew managing several unmanned aircraft during a complex combat mission.</p>
+          <p>In other words, this is an important building block — not yet an operational loyal-wingman capability.</p>
+        </div>
+
+        <div class="prose-block">
+          <div class="prose-img">
+            <figure>
+              <img src="../img/kswarm/kswarm-2.jpg" alt="KIZILELMA UCAV during K-SWARM trial at Baykar's Çorlu facility" loading="lazy" decoding="async" />
+              <figcaption>KIZILELMA UCAV during K-SWARM trial at Baykar's Çorlu facility</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="prose-block">
+          <p>The industrial side may actually be the most interesting part of the story.</p>
+          <p>Baykar brings rapid development, relatively affordable unmanned platforms and an increasingly large export network. Leonardo brings sensors, mission systems, secure communications, certification experience and access to European and NATO procurement channels.</p>
+          <p>Put together, the two companies could offer European customers a practical crewed-uncrewed solution well before the continent's more ambitious next-generation combat-air programs are ready.</p>
+        </div>
+
+        <div class="prose-block">
+          <p>The political conditions imposed by Rome also matter. Italy appears determined to keep control over where the technology can be exported and how it can be developed, particularly outside the European and NATO sphere. That suggests the partnership is being treated as a strategic capability, not simply another commercial drone project.</p>
+        </div>
+
+        <div class="pull-quote">
+          <p>Europe may be trying to close part of its unmanned combat-air gap through cooperation with Türkiye, combining Turkish speed and production capacity with Italian systems integration and certification.</p>
+        </div>
+
+        <div class="prose-block">
+          <p>K-SWARM is still at an early stage. But the Leonardo–Baykar partnership has now moved from agreements on paper to integrated aircraft in the air — and that makes it worth watching closely.</p>
+        </div>
+
+        <div class="article-source">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.732-8.835L2.25 2.25h7.261l4.261 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Originally posted on X by GeoInsider.
+          <a href="https://x.com/InsiderGeo/status/2069161540754809191" target="_blank" rel="noopener">
+            View on X
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <div class="article-nav-bottom">
+          <a href="romania-blacksea.html">← Romania's Black Sea Gas Project &amp; NATO's Grey Zone</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">Geo<span>Insider</span></div>
+        <div class="footer__copy">Independent geopolitical analysis</div>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="../index.html#case-studies">Case Studies</a>
+        <a href="../index.html#archive">Archive</a>
+        <a href="../index.html#vision">Vision</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  const btn = document.querySelector('[data-theme-toggle]');
+  const root = document.documentElement;
+  const stored = localStorage.getItem('gi-theme');
+  if(stored) root.setAttribute('data-theme', stored);
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('gi-theme', next);
+  });
+  const ham = document.querySelector('.nav__hamburger');
+  const mob = document.querySelector('.nav__mobile');
+  if(ham && mob) ham.addEventListener('click', () => {
+    const open = ham.getAttribute('aria-expanded') === 'true';
+    ham.setAttribute('aria-expanded', String(!open));
+    mob.classList.toggle('is-open', !open);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoInsider — Danilo Morisco | Geopolitical Analysis & OSINT</title>
+  <meta name="description" content="Independent OSINT-driven geopolitical analysis. Real-time conflict monitoring, Middle Eastern geopolitics, Iran-USA tensions, and military intelligence by Danilo Morisco." />
+  <meta property="og:title" content="GeoInsider — Geopolitical Analysis by Danilo Morisco" />
+  <meta property="og:description" content="Real-time conflict analysis, OSINT methodology, and deep-dive case studies on Middle East, Iran-USA tensions, and global military affairs." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon — matches GeoInsider logo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000000'/><circle cx='16' cy='16' r='11' fill='white'/><rect x='8' y='12' width='16' height='3' rx='1.5' fill='black' transform='rotate(-20 16 16)'/><rect x='8' y='16.5' width='16' height='3' rx='1.5' fill='black' transform='rotate(-20 16 16)'/><rect x='8' y='21' width='16' height='3' rx='1.5' fill='black' transform='rotate(-20 16 16)'/><circle cx='16' cy='16' r='11' fill='none' stroke='black' stroke-width='1.5'/></svg>" />
+</head>
+
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="nav" role="banner">
+  <div class="container">
+    <div class="nav__inner">
+
+      <!-- Logo -->
+      <a href="#home" class="nav__logo" aria-label="GeoInsider Home">
+        <img src="img/logo.jpg" alt="GeoInsider logo" width="36" height="36" style="border-radius:50%;display:block;flex-shrink:0;" />
+        <span class="nav__logo-text">Geo<span>Insider</span></span>
+      </a>
+
+      <!-- Desktop links -->
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#archive">Archive</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#reach">Media</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="nav__actions">
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <!-- icon injected by JS -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="https://x.com/InsiderGeo" target="_blank" rel="noopener" class="btn-cta" aria-label="Follow GeoInsider on X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.732-8.835L2.25 2.25h7.261l4.261 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Follow
+        </a>
+        <button class="nav__hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile menu -->
+    <nav aria-label="Mobile navigation">
+      <div class="nav__mobile" role="list">
+        <a href="#about">About</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#archive">Archive</a>
+        <a href="#vision">Vision</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#reach">Media & Reach</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<main id="home">
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__grid-lines" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero__content">
+
+      <div class="hero__eyebrow reveal">Independent Geopolitical Intelligence</div>
+
+      <h1 class="hero__title reveal reveal-delay-1">
+        Real-time<br>
+        <em>geopolitical</em><br>
+        intelligence.
+      </h1>
+
+      <p class="hero__subtitle reveal reveal-delay-2">
+        Independent geopolitical intelligence across conflicts, strategy, and the forces shaping our world — built from open sources, verified to rigorous standards.
+      </p>
+
+      <div class="hero__actions reveal reveal-delay-3">
+        <a href="#case-studies" class="btn-primary">
+          Read Case Studies
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#archive" class="btn-secondary">
+          Browse Archive
+        </a>
+      </div>
+
+      <div class="hero__stats reveal reveal-delay-4">
+        <div class="hero-stat">
+          <div class="stat__number" data-count="63" data-suffix=".1K">63.1K</div>
+          <div class="stat__label">X / Twitter Followers</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat__number" data-count="23" data-suffix=".1K">23.1K</div>
+          <div class="stat__label">Posts Published</div>
+        </div>
+
+        <div class="hero-stat">
+          <div class="stat__number">2022</div>
+          <div class="stat__label">Active Since</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CASE STUDIES
+     ============================================================ -->
+<section id="case-studies" class="case-studies">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-label">Featured Analysis</div>
+      <h2 class="section-title">Case Studies</h2>
+      <p class="section-desc">Deep-dive investigations into conflicts, military strategy, and geopolitical risk across every region — reconstructed from open sources.</p>
+    </div>
+
+    <div class="case-grid">
+
+      <!-- Featured -->
+      <article class="case-card case-card--featured reveal">
+        <div class="case-tag">Strategic Strike</div>
+        <h3>Operation Midnight Hammer: US Strategic Strike on Iranian Nuclear Infrastructure</h3>
+        <p>A full OSINT reconstruction of the June 2025 US strike campaign — target selection, munitions employed, Iranian damage assessment, and the geopolitical aftershock across the Strait of Hormuz and proxy network.</p>
+        <div class="case-card__meta">
+          <span class="case-date">June 2025</span>
+          <div class="case-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="case-card reveal reveal-delay-1">
+        <div class="case-tag">Nuclear</div>
+        <h3>Iran's Nuclear Threshold: From JCPOA Collapse to 60% Enrichment</h3>
+        <p>Technical and political timeline mapping Iran's enrichment milestones, centrifuge cascades at Fordow and Natanz, and international response calculus.</p>
+        <div class="case-card__meta">
+          <span class="case-date">2021–2025</span>
+          <div class="case-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="case-card reveal reveal-delay-2">
+        <div class="case-tag">Proxy Networks</div>
+        <h3>Iran's Proxy Architecture: Hezbollah, Houthis & Iraqi PMF</h3>
+        <p>How Tehran projects power across the region without direct confrontation — command structures, funding flows, and operational coordination mapped from open sources.</p>
+        <div class="case-card__meta">
+          <span class="case-date">Evergreen</span>
+          <div class="case-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="case-card reveal reveal-delay-1">
+        <div class="case-tag">Naval Operations</div>
+        <h3>The Strait of Hormuz: Naval Force Projection & Iranian Asymmetric Threat</h3>
+        <p>US carrier group deployments, Iranian fast-boat tactics, and the chokepoint that controls 20% of global oil supply — geospatially reconstructed.</p>
+        <div class="case-card__meta">
+          <span class="case-date">Ongoing</span>
+          <div class="case-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="case-card reveal reveal-delay-2">
+        <div class="case-tag">Tech & ISR</div>
+        <h3>ISR Aircraft in Active Conflict: RC-135, P-8, and E-8 Flight Pattern Analysis</h3>
+        <p>What the flight tracks of US intelligence aircraft reveal about real-time collection priorities, standoff distances, and battlespace awareness during the Iran strikes.</p>
+        <div class="case-card__meta">
+          <span class="case-date">June 2025</span>
+          <div class="case-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ARCHIVE
+     ============================================================ -->
+<section id="archive" class="archive">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-label">All Analyses</div>
+      <h2 class="section-title">Analysis Archive</h2>
+      <p class="section-desc">Every thread, report, and OSINT brief — filterable by region, conflict, and topic.</p>
+    </div>
+
+    <div class="archive-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="iran">Iran — USA</button>
+      <button class="filter-btn" data-filter="ukraine">Ukraine</button>
+      <button class="filter-btn" data-filter="nato">NATO</button>
+      <button class="filter-btn" data-filter="tech">Technology</button>
+      <button class="filter-btn" data-filter="osint">OSINT</button>
+    </div>
+
+    <div class="archive-list">
+
+      <article class="archive-item reveal" data-category="iran">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--iran">Iran — USA</span>
+          </div>
+          <div class="archive-item__title">Operation Midnight Hammer — Live Thread Coverage</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">Jun 22, 2025</span>
+          <span class="archive-type-badge">Thread</span>
+        </div>
+      </article>
+
+      <article class="archive-item reveal" data-category="iran">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--iran">Iran — USA</span>
+          </div>
+          <div class="archive-item__title">Iranian Ballistic Missile Response — Damage Assessment</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">Jun 25, 2025</span>
+          <span class="archive-type-badge">OSINT Brief</span>
+        </div>
+      </article>
+
+      <article class="archive-item reveal" data-category="tech">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--tech">Tech</span>
+            <span class="tag tag--iran">Iran — USA</span>
+          </div>
+          <div class="archive-item__title">US Space Force's Role in the Iran Conflict: Satellites, C2, and Space Domain Operations</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">Jun 2025</span>
+          <span class="archive-type-badge">Long-form</span>
+        </div>
+      </article>
+
+      <article class="archive-item reveal" data-category="ukraine">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--ukraine">Ukraine</span>
+            <span class="tag tag--nato">NATO</span>
+          </div>
+          <div class="archive-item__title">Drone Warfare Evolution: FPV Swarms, Shahed Loitering Munitions, and Future Battlefield Implications</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">May 2025</span>
+          <span class="archive-type-badge">Long-form</span>
+        </div>
+      </article>
+
+      <article class="archive-item reveal" data-category="nato">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--nato">NATO</span>
+          </div>
+          <div class="archive-item__title">NATO Eastern Flank Realignment: How Ukraine Reshaped the Alliance's Force Posture</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">Apr 2025</span>
+          <span class="archive-type-badge">Report</span>
+        </div>
+      </article>
+
+      <article class="archive-item reveal" data-category="iran">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--iran">Iran — USA</span>
+          </div>
+          <div class="archive-item__title">Strait of Hormuz: Carrier Group Deployments and Iranian Anti-Access/Area-Denial Strategy</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">Mar 2025</span>
+          <span class="archive-type-badge">Report</span>
+        </div>
+      </article>
+
+      <article class="archive-item reveal" data-category="osint">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--osint">OSINT</span>
+          </div>
+          <div class="archive-item__title">Source Guide: Best Telegram Channels for Real-Time Middle East Monitoring</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">Feb 2025</span>
+          <span class="archive-type-badge">Source Spotlight</span>
+        </div>
+      </article>
+
+      <article class="archive-item reveal" data-category="tech">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--tech">Tech</span>
+          </div>
+          <div class="archive-item__title">ISR Aircraft Flight Pattern Analysis: What RC-135 Tracks Reveal About Collection Priorities</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">Jan 2025</span>
+          <span class="archive-type-badge">Thread</span>
+        </div>
+      </article>
+
+      <article class="archive-item reveal" data-category="iran">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--iran">Iran — USA</span>
+          </div>
+          <div class="archive-item__title">Houthi Red Sea Operations: Missile and Drone Targeting of Commercial Shipping</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">Dec 2024</span>
+          <span class="archive-type-badge">OSINT Brief</span>
+        </div>
+      </article>
+
+      <article class="archive-item reveal" data-category="ukraine">
+        <div class="archive-item__left">
+          <div class="archive-item__tags">
+            <span class="tag tag--ukraine">Ukraine</span>
+          </div>
+          <div class="archive-item__title">Ukrainian Long-Range Strike Campaign: Targeting Methodology and Russian Air Defense Gaps</div>
+        </div>
+        <div class="archive-item__right">
+          <span class="archive-date">Nov 2024</span>
+          <span class="archive-type-badge">Report</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">About GeoInsider</h2>
+    </div>
+
+    <div class="about__grid">
+
+      <!-- Left: narrative -->
+      <div>
+        <blockquote class="about__intro reveal">
+          "Geopolitics doesn't wait for business hours. Neither do we."
+        </blockquote>
+
+        <div class="about__body reveal">
+          <p><strong>GeoInsider</strong> is an independent geopolitical intelligence project built by a small team of analysts and researchers. We run <a href="https://x.com/InsiderGeo" target="_blank" rel="noopener" style="color:var(--color-primary);font-weight:600;">@InsiderGeo</a> on X — over <strong>63K followers</strong> — with an active community on Substack and Discord.</p>
+          <p>Our team combines backgrounds in geopolitical analysis, OSINT research, and military history. We have published articles on military history and conducted independent research at military archives in Italy and abroad. We cover geopolitical risk, military affairs, maritime security, conflict monitoring, and strategic forecasting across every major region — with no geographic tunnel vision.</p>
+          <p>GeoInsider is built around one principle: clarity under uncertainty. We distinguish verified facts from probability assessments, propaganda from analysis, and speculation from evidence. We publish in English and Italian, and we are committed to making complex geopolitical dynamics accessible without sacrificing accuracy.</p>
+          <p>The long-term vision is to grow GeoInsider into a respected independent intelligence brand — integrating public OSINT content, premium reports, strategic briefings, and B2B risk intelligence, independent of social media algorithms.</p>
+        </div>
+
+        <div class="about__expertise reveal">
+          <h3>Coverage Areas</h3>
+          <div class="expertise-grid">
+            <div class="expertise-item">
+              <div class="expertise-item__dot"></div>
+              <span class="expertise-item__label">Geopolitical Risk & Strategic Forecasting</span>
+            </div>
+            <div class="expertise-item">
+              <div class="expertise-item__dot"></div>
+              <span class="expertise-item__label">Military Affairs & Defense Systems</span>
+            </div>
+            <div class="expertise-item">
+              <div class="expertise-item__dot"></div>
+              <span class="expertise-item__label">Maritime Security & Naval Operations</span>
+            </div>
+            <div class="expertise-item">
+              <div class="expertise-item__dot"></div>
+              <span class="expertise-item__label">Conflict Monitoring & OSINT</span>
+            </div>
+            <div class="expertise-item">
+              <div class="expertise-item__dot"></div>
+              <span class="expertise-item__label">Military History (Independent Research)</span>
+            </div>
+            <div class="expertise-item">
+              <div class="expertise-item__dot"></div>
+              <span class="expertise-item__label">Intelligence & ISR Analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: profile card -->
+      <div class="about__visual reveal">
+        <div class="about__card">
+          <div class="about__card-header">
+            <div class="about__name">GeoInsider <span style="font-size:0.7em;vertical-align:middle;color:inherit;opacity:0.85;">✓</span></div>
+            <div class="about__role">Independent Geopolitical Intelligence · @InsiderGeo</div>
+          </div>
+          <div class="about__card-body">
+
+            <div class="profile-row">
+              <div class="profile-row__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="profile-row__label">Based in</div>
+                <div class="profile-row__value">USA</div>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <div class="profile-row__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h12M3 9h12M3 13h12M3 17h7"/></svg>
+              </div>
+              <div>
+                <div class="profile-row__label">Languages</div>
+                <div class="profile-row__value">English · Italian</div>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <div class="profile-row__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div>
+                <div class="profile-row__label">Focus Areas</div>
+                <div class="profile-row__value">Geopolitics · Military Affairs · OSINT</div>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <div class="profile-row__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="profile-row__label">Monitoring Frequency</div>
+                <div class="profile-row__value">Every 2 hours during active conflicts</div>
+              </div>
+            </div>
+
+            <div class="tools-list">
+              <span class="tool-tag">X / Twitter</span>
+              <span class="tool-tag">Telegram</span>
+              <span class="tool-tag">ADS-B Exchange</span>
+              <span class="tool-tag">MarineTraffic</span>
+              <span class="tool-tag">Planet Labs</span>
+              <span class="tool-tag">Sentinel Hub</span>
+              <span class="tool-tag">RAND</span>
+              <span class="tool-tag">IISS</span>
+              <span class="tool-tag">Google Scholar</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============================================================
+     VISION — What GeoInsider Is Building
+     ============================================================ -->
+<section id="vision" class="vision">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-label">The Project</div>
+      <h2 class="section-title">What We're Building</h2>
+      <p class="section-desc">GeoInsider is evolving from a social media channel into an independent geopolitical intelligence brand — credible, rigorous, and platform-independent.</p>
+    </div>
+
+    <div class="vision-grid reveal">
+
+      <div class="vision-card">
+        <div class="vision-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Public OSINT Content</h3>
+        <p>Real-time conflict monitoring, verified breaking analysis, and open-source intelligence across X, Substack, and Discord — fast, human, and accessible.</p>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3>Premium Intelligence Reports</h3>
+        <p>In-depth geopolitical risk assessments, conflict deep-dives, and strategic forecasting — for subscribers, analysts, and decision-makers who need more than a thread.</p>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Strategic Briefings</h3>
+        <p>Executive-level geopolitical briefings tailored for governments, corporations, and investors navigating high-risk environments and emerging conflict zones.</p>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>B2B Risk Intelligence</h3>
+        <p>Recurring geopolitical risk services for companies operating in volatile regions — maritime security, conflict exposure, supply chain risk, and regulatory monitoring.</p>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Community & Education</h3>
+        <p>An active Discord community for real-time discussion, source sharing, and analytical debate — open to researchers, analysts, and engaged citizens worldwide.</p>
+      </div>
+
+      <div class="vision-card vision-card--accent">
+        <div class="vision-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Editorial Independence</h3>
+        <p>No algorithm dependence. No sponsors shaping our conclusions. GeoInsider remains rigorous, transparent, and methodologically honest — always distinguishing fact from assessment from speculation.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     METHODOLOGY
+     ============================================================ -->
+<section id="methodology" class="methodology">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Methodology</h2>
+      <p class="section-desc">Rigorous geopolitical intelligence isn't luck — it's process. GeoInsider clearly distinguishes verified facts, probability assessments, and speculation. Here's how we build, verify, and publish.</p>
+    </div>
+
+    <div class="method-grid">
+      <div class="method-card reveal">
+        <div class="method-card__number">01</div>
+        <h3>Multi-Source Verification</h3>
+        <p>Every claim requires corroboration from a minimum of three independent sources before publication. Single-source reporting is flagged explicitly as unverified.</p>
+      </div>
+      <div class="method-card reveal reveal-delay-1">
+        <div class="method-card__number">02</div>
+        <h3>Geolocation & Imagery</h3>
+        <p>Satellite imagery from Planet Labs and Sentinel Hub, cross-referenced with ground-level OSINT, to physically locate and verify reported events and damage assessments.</p>
+      </div>
+      <div class="method-card reveal reveal-delay-2">
+        <div class="method-card__number">03</div>
+        <h3>Real-Time Monitoring</h3>
+        <p>During active conflicts, primary source channels are checked every two hours. Telegram networks, flight trackers, and maritime AIS feeds are monitored in parallel.</p>
+      </div>
+      <div class="method-card reveal">
+        <div class="method-card__number">04</div>
+        <h3>Uncertainty is Explicit</h3>
+        <p>Claims are graded by confidence level. Unverified, probable, and confirmed are each labelled distinctly. GeoInsider never presents ambiguity as fact.</p>
+      </div>
+      <div class="method-card reveal reveal-delay-1">
+        <div class="method-card__number">05</div>
+        <h3>Transparent Corrections</h3>
+        <p>When errors are identified, corrections are published with equal prominence to the original claim. Source credibility is continuously reassessed.</p>
+      </div>
+      <div class="method-card reveal reveal-delay-2">
+        <div class="method-card__number">06</div>
+        <h3>Academic Cross-Reference</h3>
+        <p>Long-form analyses are grounded in peer-reviewed literature from RAND, IISS, JSTOR, and academic databases — differentiating strategic analysis from real-time reporting.</p>
+      </div>
+    </div>
+
+    <div class="source-tiers reveal">
+      <h3>Source Hierarchy</h3>
+      <div class="tier-list">
+        <div class="tier tier--1">
+          <div class="tier__badge">Tier 1</div>
+          <div class="tier__info">
+            <h4>Primary Sources</h4>
+            <p>Official government statements, confirmed satellite imagery, first-party documents, and authenticated video with geolocation verification.</p>
+          </div>
+        </div>
+        <div class="tier tier--2">
+          <div class="tier__badge">Tier 2</div>
+          <div class="tier__info">
+            <h4>Established Investigative Outlets</h4>
+            <p>Reuters, AP, BBC, and verified academic papers. Cross-referenced against at least one other Tier 1 or 2 source.</p>
+          </div>
+        </div>
+        <div class="tier tier--3">
+          <div class="tier__badge">Tier 3</div>
+          <div class="tier__info">
+            <h4>Named OSINT Researchers</h4>
+            <p>Corroborated reporting from named, established OSINT community members with documented track records and disclosed methodologies.</p>
+          </div>
+        </div>
+        <div class="tier tier--4">
+          <div class="tier__badge">Tier 4</div>
+          <div class="tier__info">
+            <h4>Social Media Signals</h4>
+            <p>Used exclusively as leads to investigate further — never as a sole source for any published claim. Always labelled as unverified until cross-referenced.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     MEDIA & REACH
+     ============================================================ -->
+<section id="reach" class="reach">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-label">Media & Reach</div>
+      <h2 class="section-title">Platform Presence</h2>
+      <p class="section-desc">GeoInsider's presence across platforms — updated monthly.</p>
+    </div>
+
+    <div class="reach-grid">
+      <div class="reach-card reveal">
+        <div class="reach-card__icon">𝕏</div>
+        <div class="reach-card__num" data-count="63" data-suffix=".1K">63.1K</div>
+        <div class="reach-card__label">X / Twitter Followers</div>
+      </div>
+      <div class="reach-card reveal reveal-delay-1">
+        <div class="reach-card__icon">📊</div>
+        <div class="reach-card__num" data-count="23" data-suffix=".1K">23.1K</div>
+        <div class="reach-card__label">Total Posts</div>
+      </div>
+      <div class="reach-card reveal reveal-delay-2">
+        <div class="reach-card__icon">👁</div>
+        <div class="reach-card__num">✓</div>
+        <div class="reach-card__label">Verified Account</div>
+      </div>
+      <div class="reach-card reveal reveal-delay-3">
+        <div class="reach-card__icon">🔁</div>
+        <div class="reach-card__num">Mar 2022</div>
+        <div class="reach-card__label">Joined X / Twitter</div>
+      </div>
+    </div>
+
+
+    <!-- X / Twitter Profile Card -->
+    <div class="x-profile-card reveal" style="margin-top:var(--space-12);margin-bottom:var(--space-4);">
+      <a href="https://x.com/InsiderGeo" target="_blank" rel="noopener" class="x-card-link">
+        <div class="x-card">
+          <div class="x-card__left">
+            <img src="img/logo.jpg" alt="GeoInsider logo" class="x-card__avatar" />
+            <div class="x-card__info">
+              <div class="x-card__name">
+                GeoInsider
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#1d9bf0" style="display:inline;vertical-align:middle;margin-left:4px;" aria-label="Verified"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91C2.88 9.33 2 10.57 2 12s.88 2.67 2.19 3.34c-.46 1.39-.2 2.9.81 3.91s2.52 1.26 3.91.8c.66 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.33-2.19c1.4.46 2.91.2 3.92-.81s1.26-2.52.8-3.91C21.37 14.67 22.25 13.43 22.25 12zm-10.07 3.96l-3.17-3.17 1.06-1.06 2.11 2.11 4.24-4.24 1.06 1.06-5.3 5.3z"/></svg>
+              </div>
+              <div class="x-card__handle">@InsiderGeo</div>
+              <div class="x-card__bio">Independent geopolitical &amp; military analysis. Conflicts, strategy, and the forces shaping them.</div>
+            </div>
+          </div>
+          <div class="x-card__right">
+            <div class="x-card__stat"><strong>63.1K</strong><span>Followers</span></div>
+            <div class="x-card__stat"><strong>23.1K</strong><span>Posts</span></div>
+            <div class="x-follow-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.732-8.835L2.25 2.25h7.261l4.261 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Follow on X
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <!-- Platform Cards: Substack + Discord -->
+    <div class="platform-cards reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-top:var(--space-4);margin-bottom:var(--space-4);">
+
+      <!-- Substack -->
+      <a href="https://insidergeo.substack.com/" target="_blank" rel="noopener" class="platform-card">
+        <div class="platform-card__icon" style="background:#FF6719;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+        </div>
+        <div class="platform-card__info">
+          <div class="platform-card__name">Substack</div>
+          <div class="platform-card__handle">insidergeo.substack.com</div>
+          <div class="platform-card__desc">Long-form analysis &amp; deep-dives</div>
+        </div>
+        <div class="platform-card__action">
+          Read →
+        </div>
+      </a>
+
+      <!-- Discord -->
+      <a href="https://discord.gg/tfc7CMft" target="_blank" rel="noopener" class="platform-card">
+        <div class="platform-card__icon" style="background:#5865F2;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+        </div>
+        <div class="platform-card__info">
+          <div class="platform-card__name">Discord</div>
+          <div class="platform-card__handle">discord.gg/tfc7CMft</div>
+          <div class="platform-card__desc">Community &amp; real-time discussion</div>
+        </div>
+        <div class="platform-card__action">
+          Join →
+        </div>
+      </a>
+
+    </div>
+
+    <div class="top-pieces reveal">
+      <h3>Top Performing Analyses</h3>
+
+      <div class="top-piece">
+        <div class="top-piece__rank">01</div>
+        <div class="top-piece__info">
+          <h4>Sanna Marin on NATO & Trump — Viral Thread</h4>
+          <div class="top-piece__meta">
+            <span>Feb 21, 2025</span>
+            <span>Thread · 24K Likes · 5.1K RT</span>
+            <span class="status-badge status--concluded">Concluded</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-piece">
+        <div class="top-piece__rank">02</div>
+        <div class="top-piece__info">
+          <h4>US Space Force's Role in the Iran Conflict</h4>
+          <div class="top-piece__meta">
+            <span>June 2025</span>
+            <span>Long-form Report</span>
+            <span class="status-badge status--concluded">Concluded</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-piece">
+        <div class="top-piece__rank">03</div>
+        <div class="top-piece__info">
+          <h4>Strait of Hormuz: Naval Force Projection Analysis</h4>
+          <div class="top-piece__meta">
+            <span>March 2025</span>
+            <span>Report</span>
+            <span class="status-badge status--active">Active Monitoring</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-piece">
+        <div class="top-piece__rank">04</div>
+        <div class="top-piece__info">
+          <h4>Drone Warfare Evolution: FPV Swarms and Future Battlefield</h4>
+          <div class="top-piece__meta">
+            <span>May 2025</span>
+            <span>Long-form</span>
+            <span class="status-badge status--developing">Developing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-piece">
+        <div class="top-piece__rank">05</div>
+        <div class="top-piece__info">
+          <h4>Iran's Proxy Architecture: Hezbollah, Houthis & Iraqi PMF</h4>
+          <div class="top-piece__meta">
+            <span>Evergreen</span>
+            <span>Case Study</span>
+            <span class="status-badge status--active">Active Monitoring</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Collaborate</h2>
+    </div>
+
+    <div class="contact__inner">
+
+      <div class="contact__info reveal">
+        <h3>Open for collaboration</h3>
+        <p>GeoInsider is open to collaboration with journalists, researchers, policy analysts, risk consultants, and media organizations. Whether you need strategic briefings, B2B geopolitical risk analysis, expert commentary, or research partnerships — get in touch.</p>
+
+        <div class="contact__socials">
+          <a href="https://x.com/InsiderGeo" target="_blank" rel="noopener" class="social-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.732-8.835L2.25 2.25h7.261l4.261 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @InsiderGeo on X / Twitter
+          </a>
+          <a href="https://linktr.ee/InsiderGeo" target="_blank" rel="noopener" class="social-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066c-.08.163-.08.324 0 .486l1.973 3.896c.163.324.567.324.73 0l1.973-3.896c.08-.162.08-.323 0-.486L9.63 8.856c-.163-.324-.567-.324-.73 0L7.953 15.066zM3.486 9.4c-.324.163-.324.567 0 .73l3.896 1.973c.162.08.323.08.486 0L11.763 10.1c.324-.163.324-.567 0-.73L7.868 7.397c-.163-.08-.324-.08-.486 0L3.486 9.4zM12.237 10.1l3.896 2.003c.162.08.323.08.486 0l3.896-1.973c.324-.163.324-.567 0-.73l-3.896-1.973c-.163-.08-.324-.08-.486 0l-3.896 1.973c-.324.163-.324.567 0 .73zM8.37 12.103l-3.896 1.973c-.324.163-.324.567 0 .73l1.973 3.896c.163.324.567.324.73 0l1.973-3.896c.08-.163.08-.324 0-.486l-1.973-3.897c-.162-.162-.324-.162-.486 0l1.68.68z"/></svg>
+            LinkTree — linktr.ee/InsiderGeo
+          </a>
+          <a href="https://insidergeo.substack.com/" target="_blank" rel="noopener" class="social-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+            Substack — insidergeo.substack.com
+          </a>
+          <a href="https://discord.gg/tfc7CMft" target="_blank" rel="noopener" class="social-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            Discord Community — discord.gg/tfc7CMft
+          </a>
+        </div>
+      </div>
+
+      <form id="contact-form" class="contact__form reveal" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="org">Organization</label>
+            <input type="text" id="org" name="org" placeholder="Media outlet, think tank, etc." />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="type">Inquiry Type</label>
+          <select id="type" name="type">
+            <option value="">Select type…</option>
+            <option value="media">Media Inquiry</option>
+            <option value="research">Research Collaboration</option>
+            <option value="podcast">Podcast / Interview</option>
+            <option value="general">General</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Describe your inquiry…" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">Geo<span>Insider</span></div>
+        <div class="footer__copy">Independent geopolitical analysis by Danilo Morisco</div>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="#case-studies">Case Studies</a>
+        <a href="#archive">Archive</a>
+        <a href="#vision">Vision</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

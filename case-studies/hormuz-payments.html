@@ -79,32 +79,56 @@
   margin: 0 auto;
 }
 
-/* tweet block */
-.tweet-block {
-  margin-bottom: var(--space-8);
-  padding-bottom: var(--space-8);
-  border-bottom: 1px solid var(--color-divider);
+/* prose block */
+.prose-block {
+  margin-bottom: var(--space-10);
 }
-.tweet-block:last-child { border-bottom: none; }
-.tweet-block p {
+.prose-block p {
   font-size: var(--text-base);
-  line-height: 1.75;
+  line-height: 1.8;
   color: var(--color-text);
-  white-space: pre-line;
+  margin-bottom: var(--space-6);
 }
-.tweet-block .tweet-img {
-  margin-top: var(--space-6);
+.prose-block p:last-of-type {
+  margin-bottom: 0;
+}
+.prose-block .prose-img {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--color-surface-offset);
 }
-.tweet-block .tweet-img img {
+.prose-block .prose-img img {
   width: 100%;
   display: block;
   height: auto;
-  max-height: 540px;
+  max-height: 560px;
   object-fit: contain;
   background: var(--color-surface-offset);
+}
+.prose-img figcaption {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--space-2) var(--space-4);
+}
+
+/* pull quote */
+.pull-quote {
+  border-left: 3px solid var(--color-primary);
+  padding: var(--space-4) var(--space-8);
+  margin: var(--space-10) 0;
+  background: var(--color-primary-subtle);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.pull-quote p {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  color: var(--color-text);
+  font-style: italic;
+  margin: 0;
 }
 
 /* ── Source link ── */
@@ -274,38 +298,42 @@
     <div class="container container--default">
       <div class="article-content">
 
-        <div class="tweet-block">
-          <p>How Iran and Oman could normalize payments for crossing Hormuz.
-
-Tehran and Muscat are not openly proposing a toll. They are building the possible legal architecture for ships to pay without formally paying for the right of passage.</p>
-        </div>
-
-        <div class="tweet-block">
+        <div class="prose-block">
+          <p>Tehran and Muscat are not openly proposing a toll. They are building the possible legal architecture for ships to pay without formally paying for the right of passage.</p>
           <p>UNCLOS Articles 38 and 44 protect continuous transit through international straits and prohibit coastal states from obstructing or suspending it. The narrow opening is the logic of Article 26: vessels cannot be charged merely for passing, but non-discriminatory fees may be collected for specific services actually rendered.</p>
         </div>
 
-        <div class="tweet-block">
+        <div class="prose-block">
           <p>A defensible Iran–Oman system could therefore combine paid pilotage, towing, emergency response and other vessel-specific services with a broader Article 43 cooperative mechanism funding navigation aids, traffic management, search and rescue, and pollution response. Tariffs would need to be transparent, proportionate to real costs and identical for comparable vessels, ideally with IMO involvement and independent auditing.</p>
-          <div class="tweet-img">
-            <img src="../img/hormuz_traffic_control.png" alt="Maritime traffic control room" loading="lazy" decoding="async" />
+          <div class="prose-img">
+            <figure>
+              <img src="../img/hormuz_traffic_control.png" alt="Maritime traffic control room" loading="lazy" decoding="async" />
+              <figcaption>Maritime traffic management centre — the operational backbone of any Article 43 cooperative mechanism</figcaption>
+            </figure>
           </div>
         </div>
 
-        <div class="tweet-block">
+        <div class="pull-quote">
+          <p>The strategy is to shift the argument from whether ships should pay to what service they are supposedly paying for.</p>
+        </div>
+
+        <div class="prose-block">
           <p>There are precedents, but none gives Iran a blank cheque. Under the 1936 Montreux Convention, Turkey collects limited dues for sanitary, lighthouse and lifesaving services. The Malacca–Singapore mechanism funds navigation safety through cooperation with user states and industry. Meanwhile, the old Danish Sound Dues were abolished in 1857. Suez and Panama are poor comparisons because they are artificial canals governed by separate legal regimes.</p>
-          <div class="tweet-img" style="margin-top: var(--space-4);">
-            <img src="../img/montreux_convention.jpg" alt="Montreux Convention" loading="lazy" decoding="async" />
+          <div class="prose-img">
+            <figure>
+              <img src="../img/montreux_convention.jpg" alt="Montreux Convention" loading="lazy" decoding="async" />
+              <figcaption>The 1936 Montreux Convention — Turkey's model for limited transit dues that remain within international law</figcaption>
+            </figure>
           </div>
         </div>
 
-        <div class="tweet-block">
-          <p>So the strategy is likely to shift the argument from whether ships should pay to what service they are supposedly paying for.</p>
+        <div class="pull-quote">
+          <p>If payment becomes compulsory simply to cross Hormuz, it becomes a de facto toll — and almost certainly an unlawful one.</p>
         </div>
 
-        <div class="tweet-block">
-          <p>But the red line remains clear: if payment becomes compulsory simply to cross Hormuz, varies according to flag or political alignment, greatly exceeds the cost of the service, or is enforced through detention and coercion, it becomes a de facto toll and almost certainly an unlawful one.
-
-Oman can give the project diplomatic and institutional credibility. It also constrains Iran, because Muscat cannot legally turn an international strait into a joint toll booth.</p>
+        <div class="prose-block">
+          <p>The red line remains clear: if payment varies according to flag or political alignment, greatly exceeds the cost of the service, or is enforced through detention and coercion, it crosses into illegal territory under international law.</p>
+          <p>Oman can give the project diplomatic and institutional credibility. It also constrains Iran, because Muscat cannot legally turn an international strait into a joint toll booth.</p>
         </div>
 
         <div class="article-source">

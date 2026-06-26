@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Romania, Moldova and the Kremlin Disinformation Playbook — GeoInsider</title>
+  <meta property="og:title" content="Romania, Moldova and the Kremlin Disinformation Playbook" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.insidergeo.com/img/romania_moldova_p1_img3.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+/* ── Article page layout ── */
+.article-hero {
+  padding: var(--space-24) 0 var(--space-16);
+  border-bottom: 1px solid var(--color-divider);
+}
+.article-hero .article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+  transition: color var(--transition-interactive);
+}
+.article-hero .article-back:hover { color: var(--color-primary-hover); }
+.article-hero .article-back svg { flex-shrink: 0; }
+.article-tag {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.article-hero h1 {
+  font-size: var(--text-2xl);
+  line-height: 1.1;
+  margin-bottom: var(--space-6);
+  max-width: 760px;
+}
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+.article-meta .meta-sep { color: var(--color-divider); }
+.article-cover {
+  margin-top: var(--space-12);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  max-height: 480px;
+}
+.article-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Article body ── */
+.article-body {
+  padding: var(--space-16) 0 var(--space-24);
+}
+.article-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* attention banner */
+.attention-banner {
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  margin-bottom: var(--space-8);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* tweet block */
+.tweet-block {
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-divider);
+}
+.tweet-block:last-of-type { border-bottom: none; }
+.tweet-number {
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+.tweet-block p {
+  font-size: var(--text-base);
+  line-height: 1.75;
+  color: var(--color-text);
+}
+.tweet-block .tweet-img {
+  margin-top: var(--space-6);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface-offset);
+}
+.tweet-block .tweet-img img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  background: var(--color-surface-offset);
+}
+
+/* ── Source link ── */
+.article-source {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.article-source a {
+  color: var(--color-primary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.article-source a:hover { color: var(--color-primary-hover); }
+
+/* ── Bottom nav ── */
+.article-nav-bottom {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.article-nav-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: color var(--transition-interactive);
+}
+.article-nav-bottom a:hover { color: var(--color-primary-hover); }
+
+@media (max-width: 640px) {
+  .article-hero h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+  .article-meta { font-size: var(--text-xs); }
+}
+  </style>
+  <!-- SEO -->
+  <meta name="description" content="Before you share the claim that Romania is advancing a bill to unify with Moldova, read this. The story is being used by the Kremlin to push the narrative that Romania wants to annex Moldova." />
+  <meta name="keywords" content="Romania, Moldova, Kremlin disinformation, Șoșoacă, Maia Sandu, Russian propaganda, unification bill" />
+  <link rel="canonical" href="https://www.insidergeo.com/case-studies/romania-moldova-disinfo.html" />
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://www.insidergeo.com/case-studies/romania-moldova-disinfo.html" />
+  <meta property="og:site_name" content="GeoInsider" />
+  <meta property="article:published_time" content="2026-06-25" />
+  <meta property="og:description" content="Before you share the claim that Romania is advancing a bill to unify with Moldova, read this. The story is being used by the Kremlin to push the narrative that Romania wants to annex Moldova." />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@InsiderGeo" />
+  <meta name="twitter:title" content="Romania, Moldova and the Kremlin Disinformation Playbook" />
+  <meta name="twitter:description" content="Before you share the claim that Romania is advancing a bill to unify with Moldova, read this. The story is being used by the Kremlin to push the narrative that Romania wants to annex Moldova." />
+  <meta name="twitter:image" content="https://www.insidergeo.com/img/romania_moldova_p1_img3.jpeg" />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Romania, Moldova and the Kremlin Disinformation Playbook",
+    "description": "Before you share the claim that Romania is advancing a bill to unify with Moldova, read this. The story is being used by the Kremlin to push the narrative that Romania wants to annex Moldova.",
+    "image": "https://www.insidergeo.com/img/romania_moldova_p1_img3.jpeg",
+    "datePublished": "2026-06-25",
+    "author": {
+      "@type": "Organization",
+      "name": "GeoInsider",
+      "url": "https://www.insidergeo.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GeoInsider",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.insidergeo.com/img/logo.jpg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.insidergeo.com/case-studies/romania-moldova-disinfo.html"
+    },
+    "keywords": "Romania, Moldova, disinformation, Kremlin, Șoșoacă, Russian propaganda"
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="GeoInsider Home">
+        <img src="../img/logo.jpg" alt="GeoInsider logo" width="36" height="36" style="border-radius:50%;display:block;flex-shrink:0;" />
+        <span class="nav__logo-text">Geo<span>Insider</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#case-studies">Case Studies</a></li>
+          <li><a href="../index.html#vision">Vision</a></li>
+          <li><a href="../index.html#reach">Media</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="https://buymeacoffee.com/geoinsider" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="https://x.com/InsiderGeo" target="_blank" rel="noopener" class="btn-cta" aria-label="Follow GeoInsider on X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.732-8.835L2.25 2.25h7.261l4.261 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Follow
+        </a>
+        <button class="nav__hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <div class="nav__mobile" role="list">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#case-studies">Case Studies</a>
+        <a href="../index.html#vision">Vision</a>
+        <a href="../index.html#reach">Media &amp; Reach</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://buymeacoffee.com/geoinsider" target="_blank" rel="noopener">Support</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <div class="container container--default">
+      <a href="../index.html#case-studies" class="article-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        All Case Studies
+      </a>
+      <div class="article-tag">Romania · Moldova · Disinformation · Kremlin</div>
+      <h1>Romania, Moldova and the Kremlin Disinformation Playbook</h1>
+      <div class="article-meta">
+        <span>GeoInsider</span>
+        <span class="meta-sep">·</span>
+        <span>Jun 25, 2026</span>
+        <span class="meta-sep">·</span>
+        <span>Originally published on
+          <a href="https://x.com/InsiderGeo/status/2070257650378444831" target="_blank" rel="noopener" style="color:var(--color-primary);font-weight:600;">X / @InsiderGeo</a>
+        </span>
+      </div>
+      <div class="article-cover">
+        <img src="../img/romania_moldova_p1_img3.jpeg" alt="Map of Romania showing its geography and neighboring countries" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <section class="article-body">
+    <div class="container container--default">
+      <div class="article-content">
+
+        <div class="attention-banner">
+          ATTENTION: BEFORE YOU SHARE THE CLAIM THAT "ROMANIA IS ADVANCING A BILL TO UNIFY WITH MOLDOVA," READ THIS. Right now, this story is being used by the Kremlin to push the narrative that Romania wants to "annex" Moldova. Don't amplify the narrative without the full context.
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">1 /</div>
+          <p>The proposal was introduced by S.O.S. România, led by Diana Șoșoacă, a Romanian politician who has publicly described herself as "pro-Putin" and said she "loves Russia." This is not a Romanian government initiative. The government opposed the bill and issued a negative opinion.</p>
+          <div class="tweet-img">
+            <img src="../img/romania_moldova_p2_img2.jpeg" alt="Diana Șoșoacă in the Romanian Parliament" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">2 /</div>
+          <p>The bill was not approved by Parliament through a vote. It advanced through Romania's tacit adoption procedure, meaning deputies did not debate or vote on it before the constitutional deadline expired. It now goes to the Senate, which has the final decision.</p>
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">3 /</div>
+          <p>Former Constitutional Court President Augustin Zegrean said the proposal has no real legal effects in its current form. It is far from becoming law and does not represent a change in Romanian foreign policy toward Moldova.</p>
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">4 /</div>
+          <p>Within hours, Moscow seized on the proposal. Russian Foreign Ministry spokeswoman Maria Zakharova claimed the bill proves Romania wants to "annex" Moldova, arguing this is not unification but a takeover and accusing Bucharest of long-term expansionist ambitions.</p>
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">5 /</div>
+          <p>The Kremlin's narrative was quickly amplified by pro-Russian politicians in Moldova. Former President Igor Dodon accused the government of betraying Moldova's sovereignty unless it rejected unification.</p>
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">6 /</div>
+          <p>Moldovan President Maia Sandu dismissed the proposal, saying it should not be taken seriously because it was introduced by what she described as "an agent of Moscow." She argued its purpose is to discredit the idea of unification, not to advance it.</p>
+          <div class="tweet-img">
+            <img src="../img/romania_moldova_p2_img3.jpeg" alt="Moldovan President Maia Sandu speaking at the European Parliament" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">7 /</div>
+          <p>Diana Șoșoacă has repeatedly taken positions favorable to Russia. She met the Russian ambassador shortly after the full-scale invasion, attended RT's anniversary in Moscow, called herself "pro-Putin," and publicly said she "loves Russia."</p>
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">8 /</div>
+          <p>Weeks ago, Șoșoacă also appeared on Russian state television after the Galați drone strike, questioning Romania's investigation and saying Russia should examine the wreckage. After Romanian authorities had already concluded it was a Russian-made Geran-2 drone.</p>
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">9 /</div>
+          <p>The story is not that Romania is preparing to unite with Moldova. The story is that a proposal with no government support, negative official opinions, and no immediate legal effect is already being used by Moscow to reinforce its narrative that Romania threatens Moldova.</p>
+        </div>
+
+        <div class="tweet-block">
+          <div class="tweet-number">10 /</div>
+          <p>No major pro-European leader in Romania or Moldova has endorsed this proposal. Instead, it has been amplified by the Kremlin and pro-Russian politicians to push a single narrative that Romania is a threat to Moldova's sovereignty and seeks to "annex" it.</p>
+          <p style="margin-top: var(--space-5);">This isn't new sentiment. Over the years, plenty of politicians on both sides have said they'd personally back unification — ex President Băsescu called it his "soul project," Ghimpu and Chirtoacă backed it from the 2000s, Leancă said it was the only way to protect Moldova from Russia, and Sandu herself said on a British podcast in January she'd vote "yes" in a referendum. President Nicușor Dan has shown similar openness.</p>
+          <p style="margin-top: var(--space-5);">But none of that has anything to do with this bill. Those are personal opinions, mostly conditional on a future referendum — not legislation. Șoșoacă's bill is a fringe, government-opposed initiative that passed only by procedural default, with zero input from any of these figures. Supporting the idea and legislating it are two very different things, and right now neither country can carry this through economically, legally, or geopolitically.</p>
+        </div>
+
+        <div class="article-source">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.732-8.835L2.25 2.25h7.261l4.261 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Originally posted as a thread on X by GeoInsider.
+          <a href="https://x.com/InsiderGeo/status/2070257650378444831" target="_blank" rel="noopener">
+            View on X
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <div class="article-nav-bottom">
+          <a href="hormuz-payments.html">← Hormuz Payments</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">Geo<span>Insider</span></div>
+        <div class="footer__copy">Independent geopolitical analysis</div>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="../index.html#case-studies">Case Studies</a>
+        <a href="../index.html#vision">Vision</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const btn = document.querySelector('[data-theme-toggle]');
+  const root = document.documentElement;
+  const stored = localStorage.getItem('gi-theme');
+  if(stored) root.setAttribute('data-theme', stored);
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('gi-theme', next);
+  });
+  const ham = document.querySelector('.nav__hamburger');
+  const mob = document.querySelector('.nav__mobile');
+  if(ham && mob) ham.addEventListener('click', () => {
+    const open = ham.getAttribute('aria-expanded') === 'true';
+    ham.setAttribute('aria-expanded', String(!open));
+    mob.classList.toggle('is-open', !open);
+  });
+})();
+</script>
+</body>
+</html>

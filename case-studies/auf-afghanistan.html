@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A New War Is Starting in the Taliban's Backyard — GeoInsider</title>
+  <meta property="og:title" content="A New War Is Starting in the Taliban's Backyard" />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+.article-hero {
+  padding: var(--space-24) 0 var(--space-16);
+  border-bottom: 1px solid var(--color-divider);
+}
+.article-hero .article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+  transition: color var(--transition-interactive);
+}
+.article-hero .article-back:hover { color: var(--color-primary-hover); }
+.article-hero .article-back svg { flex-shrink: 0; }
+.article-tag {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.article-hero h1 {
+  font-size: var(--text-2xl);
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+  max-width: 760px;
+}
+.article-hero .article-subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-6);
+  max-width: 680px;
+  line-height: 1.5;
+}
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+.article-meta .meta-sep { color: var(--color-divider); }
+.article-body {
+  padding: var(--space-16) 0 var(--space-24);
+}
+.article-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.article-lede {
+  font-size: var(--text-lg);
+  line-height: 1.85;
+  color: var(--color-text);
+  font-weight: 400;
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-10);
+  border-bottom: 1px solid var(--color-divider);
+}
+.prose-section {
+  margin-bottom: var(--space-10);
+}
+.prose-section h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+  margin-top: var(--space-12);
+}
+.prose-section p {
+  font-size: var(--text-base);
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+}
+.prose-section p:last-child { margin-bottom: 0; }
+
+.pull-quote {
+  margin: var(--space-10) 0;
+  padding: var(--space-6) var(--space-8);
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-primary-subtle);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+.pull-quote p {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.note-box {
+  margin: var(--space-8) 0;
+  padding: var(--space-6) var(--space-7);
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+}
+.note-box h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+.note-box p {
+  font-size: var(--text-sm);
+  line-height: 1.75;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+.note-box p:last-child { margin-bottom: 0; }
+
+.article-img {
+  margin: var(--space-10) 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface-offset);
+}
+.article-img img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 560px;
+  object-fit: cover;
+  background: var(--color-surface-offset);
+}
+.article-img figcaption {
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--space-3) var(--space-5) var(--space-4);
+  line-height: 1.5;
+  border-top: 1px solid var(--color-divider);
+}
+
+.article-source {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+.article-source a {
+  color: var(--color-primary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.article-source a:hover { color: var(--color-primary-hover); }
+.article-nav-bottom {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.article-nav-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: color var(--transition-interactive);
+}
+.article-nav-bottom a:hover { color: var(--color-primary-hover); }
+@media (max-width: 640px) {
+  .article-hero h1 { font-size: clamp(1.5rem, 5vw, 2rem); }
+  .article-meta { font-size: var(--text-xs); }
+  .pull-quote { padding: var(--space-5) var(--space-5); }
+}
+  </style>
+  <meta name="description" content="The Afghan United Front: What We Can Verify, and What We Can't Yet. On August 1, a group called the Afghan United Front started publicly claiming armed operations against the Taliban." />
+  <meta name="keywords" content="Afghanistan, Taliban, Afghan United Front, AUF, Sami Sadat, Kandahar, Helmand, resistance, insurgency, Badakhshan" />
+  <link rel="canonical" href="https://www.insidergeo.com/case-studies/auf-afghanistan.html" />
+  <meta property="og:url" content="https://www.insidergeo.com/case-studies/auf-afghanistan.html" />
+  <meta property="og:site_name" content="GeoInsider" />
+  <meta property="article:published_time" content="2026-08-15" />
+  <meta property="og:description" content="The Afghan United Front: What We Can Verify, and What We Can't Yet. On August 1, a group started publicly claiming armed operations against the Taliban in Kandahar and Helmand." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@InsiderGeo" />
+  <meta name="twitter:title" content="A New War Is Starting in the Taliban's Backyard" />
+  <meta name="twitter:description" content="The Afghan United Front: What We Can Verify, and What We Can't Yet." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "A New War Is Starting in the Taliban's Backyard",
+    "description": "The Afghan United Front: What We Can Verify, and What We Can't Yet.",
+    "datePublished": "2026-08-15",
+    "author": {"@type": "Organization", "name": "GeoInsider", "url": "https://www.insidergeo.com"},
+    "publisher": {"@type": "Organization", "name": "GeoInsider", "logo": {"@type": "ImageObject", "url": "https://www.insidergeo.com/img/logo.jpg"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.insidergeo.com/case-studies/auf-afghanistan.html"},
+    "keywords": "Afghanistan, Taliban, Afghan United Front, Sami Sadat, Kandahar, Helmand"
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="GeoInsider Home">
+        <img src="../img/logo.jpg" alt="GeoInsider logo" width="36" height="36" style="border-radius:50%;display:block;flex-shrink:0;" />
+        <span class="nav__logo-text">Geo<span>Insider</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#case-studies">Case Studies</a></li>
+          <li><a href="../index.html#vision">Vision</a></li>
+          <li><a href="../index.html#reach">Media</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="https://buymeacoffee.com/geoinsider" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="https://x.com/InsiderGeo" target="_blank" rel="noopener" class="btn-cta" aria-label="Follow GeoInsider on X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.732-8.835L2.25 2.25h7.261l4.261 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Follow
+        </a>
+        <button class="nav__hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <div class="nav__mobile" role="list">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#case-studies">Case Studies</a>
+        <a href="../index.html#vision">Vision</a>
+        <a href="../index.html#reach">Media &amp; Reach</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://buymeacoffee.com/geoinsider" target="_blank" rel="noopener">Support</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="article-hero">
+    <div class="container container--default">
+      <a href="../index.html#case-studies" class="article-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        All Case Studies
+      </a>
+      <div class="article-tag">Afghanistan · Taliban · Insurgency · Central Asia</div>
+      <h1>A New War Is Starting in the Taliban's Backyard</h1>
+      <p class="article-subtitle">The Afghan United Front: What We Can Verify, and What We Can't Yet</p>
+      <div class="article-meta">
+        <span>GeoInsider</span>
+        <span class="meta-sep">·</span>
+        <span>Aug 15, 2026</span>
+        <span class="meta-sep">·</span>
+        <span>Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container container--default">
+      <div class="article-content">
+
+        <figure class="article-img">
+          <img src="../img/auf_main.jpg" alt="Afghan United Front — armed resistance against the Taliban in Kandahar and Helmand" loading="eager" decoding="async" />
+          <figcaption>The Afghan United Front began publicly claiming armed operations on August 1, 2026, with a focus on Kandahar and Helmand — the Taliban's core territory.</figcaption>
+        </figure>
+
+        <p class="article-lede">On August 1, a group called the Afghan United Front started publicly claiming armed operations against the Taliban. The organization itself is not new. It has existed since 2023, holding meetings, giving interviews, testifying in Washington, and occasionally hinting that it would fight one day. What changed this month is that it began attaching its name to specific attacks, in specific provinces, on specific dates — including in Kandahar and Helmand, the two provinces the Taliban consider home ground.</p>
+
+        <div class="prose-section">
+          <p>That shift raises a question worth taking seriously, and it is not "will the AUF topple the Taliban." It won't, and nobody credible is arguing it will. The question is narrower and more useful: is there now a real AUF network operating inside Afghanistan behind those claims, or are we looking at a well-connected exile organization with a good media operation and a loose relationship to violence that would be happening anyway?</p>
+          <p>I don't think the public evidence settles that yet. But the evidence we do have is worth laying out carefully, because both answers have consequences.</p>
+        </div>
+
+        <div class="prose-section">
+          <h2>The claims record so far</h2>
+          <p>The AUF's public debut ran through FDD's Long War Journal, which published an interview with the group's leader on August 1 alongside the first claims. That choice of venue is itself a data point, and I'll come back to it.</p>
+          <p>The opening claim was odd. The AUF took credit for an attack in Kandahar that killed two Taliban fighters — but the attack was nearly a year old. Claiming an operation eleven months after the fact tells you something about how the group wants to build a track record, and it is one of the details I keep in mind when weighing everything that came after. A second claim followed the same day, this one current: a small raid in Lashkar Gah, Helmand.</p>
+          <p>Over the following week, the group claimed a run of additional operations, each framed the same way. In Badghis, the killing of two Taliban members the AUF said had participated in torturing former security forces personnel. In Ghor, an assault on a Taliban base — two killed, four wounded, weapons seized — presented as retaliation for the killing of a woman who had served in the Republic-era Afghan National Police. In Farah, the assassination of a member of Taliban intelligence. In Kandahar, two guards killed at a police station, plus two more targeted killings of intelligence personnel. By August 9, the AUF was claiming a running total of 18 Taliban fighters killed and 13 wounded across eight provinces, along with a drone strike on a fuel storage site in Kabul.</p>
+
+          <div class="note-box">
+            <h3>Evidentiary status</h3>
+            <p>Every figure above comes from the AUF itself, mostly via the Long War Journal. Some claims have been picked up by Afghan outlets and some include video. Independent confirmation of the casualty totals, of who actually carried out each attack, and of the size of whatever network exists behind them is still thin. That is the honest state of the record two weeks in.</p>
+          </div>
+
+          <p>What the claims do show, even taken purely as messaging, is discipline. The AUF is consistently targeting Taliban intelligence and security personnel, and it is consistently linking individual attacks to specific alleged crimes — torture, detentions, killings of former Republic forces. Whether or not every operation happened as described, someone is putting real thought into giving this campaign a recognizable political logic: this is retribution against the repression apparatus, on behalf of the people who served the previous state. That framing is aimed as much at former ANA and NDS personnel still inside Afghanistan as it is at foreign audiences.</p>
+        </div>
+
+        <div class="prose-section">
+          <h2>Who Sami Sadat is</h2>
+          <p>The AUF's leader is Sami Sadat, a former lieutenant general in the Afghan National Army, elected to lead the group in 2023. If you followed the last years of the Republic, you know the name. Sadat spent most of his career in the intelligence and special operations world: years inside the NDS, including in its covert action apparatus, command of a joint special operations unit, and training at Western military institutions including Britain's Joint Services Command and Staff College. In 2021 he commanded the 215th Maiwand Corps in Helmand, and in the final weeks before the collapse he was given command of the Afghan special operations corps.</p>
+          <p>Two things about that biography, and both matter.</p>
+          <p>First, the credentials are real. Sadat is one of a relatively small number of former Afghan commanders with genuine clandestine-operations experience, existing personal networks in the south, and fluency in Pashto. Most of the organized armed resistance since 2021 — the National Resistance Front, the Afghan Freedom Front — has been rooted in northern, largely Tajik, Uzbek and Hazara networks. A campaign run out of Kandahar and Helmand needs a different kind of commander, and on paper Sadat fits.</p>
+          <p>A note on ethnicity, since much of the coverage flattens it. The Long War Journal has presented the AUF as the first major Pashtun-led resistance organization, and describes Sadat as Pashtun. Sadat himself has described his family as belonging to the Sadat, a smaller Sayyid-descended community, and his background is more layered than the "Pashtun general" shorthand suggests. Operationally I'm not sure the label matters much. What matters is that he speaks Pashto natively, commanded troops in the south, and is recruiting in communities the northern resistance has never been able to reach. The AUF, for its part, markets its leadership council as deliberately multi-ethnic.</p>
+
+          <div class="pull-quote">
+            <p>Second, and this needs saying plainly: Helmand collapsed under Sadat's command in 2021. The background gives him networks and experience. It does not give him a free pass on competence.</p>
+          </div>
+
+          <p>His defenders point to the impossible strategic position every Afghan commander was in after Doha, and there is substance to that. But his critics inside the Afghan diaspora have not forgotten, and any assessment that treats his command record purely as a credential is doing half the work.</p>
+        </div>
+
+        <div class="prose-section">
+          <h2>Why the south matters</h2>
+          <p>If the AUF's southern claims are even partly real, they change the geography of this conflict in a way that matters more than the body counts.</p>
+          <p>The Taliban's core assumption since 2021 has been that armed resistance is a northern problem — containable in Panjshir, Baghlan, Badakhshan, manageable through garrisons and periodic sweeps, and politically dismissible as the grievance of ethnic minorities who lost the war. Kandahar is where the Taliban's supreme leader lives. It is the movement's spiritual and administrative center of gravity. Sustained attacks there, however small, attack the assumption itself.</p>
+          <p>Sadat has been explicit about this. He told the Long War Journal that Kandahar was chosen deliberately, to show the Taliban that "there is nowhere safe from our attacks." Strip out the bravado and the underlying logic holds: a campaign in the south forces the Taliban to police its own heartland, to treat Pashtun communities and former security personnel there as suspect populations, and to spread an intelligence apparatus that is already stretched. Repressive systems can absorb violence at the periphery for a long time. Violence at the center is a different kind of problem, even at low intensity.</p>
+          <p>That is the theory, anyway. Whether the AUF can sustain activity in the south is exactly the thing the public record does not yet establish.</p>
+        </div>
+
+        <div class="prose-section">
+          <h2>Three explanations</h2>
+          <p>As I see it, there are at least three readings of what the AUF actually is right now, and the current evidence does not let us pick one with confidence.</p>
+          <p>The first is that Sadat has spent three years doing what he says he has been doing: quietly activating former security personnel, building cells in the south, arranging logistics and communications, and waiting to start on his own terms. His stated timeline — years of preparation, a deliberate choice of moment — is consistent with how he operated as a commander, and the tradecraft implied by some of the claimed attacks (identifying and tracking individual intelligence officers, tying them to specific abuses) would require real penetration of Taliban structures.</p>
+          <p>The second is that the AUF is a coordination layer or a brand: a common flag and a claims channel sitting on top of a much looser set of local cells, personal feuds and small groups that were already carrying out sporadic violence. In this reading the AUF adds messaging discipline and international connections, and the network is thinner than the communiqués imply.</p>
+          <p>The third is that at least some of the claims are opportunistic — violence the AUF did not organize, absorbed into its ledger after the fact. The year-old Kandahar attack claimed on day one is the concrete reason this hypothesis has to stay on the table. A group confident in its current operational tempo does not usually need to reach eleven months into the past for its opening announcement.</p>
+
+          <div class="pull-quote">
+            <p>My read: the first two are both plausible and probably both partly true, and the third cannot yet be excluded for individual claims even if the campaign as a whole is real. Insurgent organizations at this stage are usually messy mixtures of all three.</p>
+          </div>
+        </div>
+
+        <div class="prose-section">
+          <h2>The Washington connection</h2>
+          <p>The foreign-support question follows the AUF everywhere, and it deserves precision rather than insinuation.</p>
+          <p>Here is what is documented. Sadat is based in Virginia. He testified before the House Foreign Affairs Committee in November 2023. He trained at Western institutions, maintains relationships in Washington from two decades of coalition warfare, and has openly and repeatedly asked NATO countries for material support against the Taliban — he is not hiding the ask, he is making it on the record.</p>
+          <p>Here is what is not documented: any public evidence that the United States or any other government is directing, funding or supplying AUF operations. None so far.</p>
+          <p>Those two paragraphs need to be kept apart. Access and outreach are real, and they matter — an exile group with a Virginia office and congressional testimony behind it has options that a valley-based militia does not, and the choice to debut through a Washington-aligned outlet like the Long War Journal tells you who the intended audience of this launch was. But conflating documented access with covert backing is exactly the analytical shortcut that produces confident, wrong stories. If evidence of state support emerges, it will most likely show up indirectly first: in the sophistication and consistency of AUF operations, in the kinds of equipment recovered by the Taliban, in patterns that a self-funded exile network cannot easily explain. Watch for that. Don't assume it.</p>
+          <p>There is one more actor worth naming here. Pakistan has been fighting an on-again, off-again border war with the Taliban government since October 2025, and Islamabad's intelligence services have every incentive to cultivate instruments that degrade Kabul from within. I have seen no evidence connecting the ISI to the AUF, and Sadat's history of running operations against militants inside Pakistan makes the relationship anything but natural. But in this region, incentive structures like that one rarely go unexplored forever, and it belongs on the list of things to monitor.</p>
+        </div>
+
+        <div class="prose-section">
+          <h2>Why the timing is dangerous for Kabul</h2>
+          <p>The AUF on its own is a manageable problem for the Taliban. The AUF arriving in August 2026 is a different matter, because it lands on a government that is already fighting on several fronts at once.</p>
+          <p>The most acute is Badakhshan. The Taliban's dispute with Juma Khan Fateh — a Tajik Taliban commander, long the dominant power broker in the province's gold mining economy — has broken into open fighting. Fateh was moved out of Badakhshan earlier this year and made deputy governor of Zabul, a transfer he effectively refused; the Taliban then detained associates and relatives, cracked down on mining operations, and in recent weeks the standoff has escalated into armed clashes around the Darwaz districts, an audio message from Fateh calling his supporters to war against the movement, targeted killings of Taliban officials in the province, and a formal protest from Tajikistan over airspace violations during the fighting. Meanwhile the Afghan Freedom Front has been running some of its most effective operations to date in the same province. However the Fateh dispute resolves, the Taliban is now committing forces and senior attention to a fight inside its own ranks, in the northeast, at exactly the moment a new southern front is being announced.</p>
+          <p>Layer onto that the Pakistan border war, which has periodically drawn Taliban forces to a long frontier they cannot adequately monitor, the persistent Islamic State Khorasan threat, and an economic and humanitarian situation that gets worse every quarter as deportations from neighboring countries pile returnees onto a broken food system. None of these pressures is individually fatal. The Taliban's problem is that they are accumulating, and that the movement's answer to every one of them is more repression, which is precisely the grievance the AUF has built its messaging around.</p>
+
+          <div class="pull-quote">
+            <p>A second front in the south does not need to win battles to matter. It needs to exist, persistently, in places the Taliban thought were safe.</p>
+          </div>
+        </div>
+
+        <div class="prose-section">
+          <h2>What I'm watching</h2>
+          <p>The next couple of months should tell us most of what we need to know, and the indicators are practical ones.</p>
+          <p>Repeated, independently reported attacks in Kandahar and Helmand — not a burst in week one that fades by October. Casualty figures confirmed by Afghan outlets with local sourcing rather than by the AUF's own graphics. Taliban behavior: arrests of alleged AUF members, sweeps in southern districts, recovered weapons and equipment, public statements acknowledging the group — a government's counterintelligence reaction is often a better measure of a clandestine network than the network's own claims. Evidence of coordination across provinces, which separates an organization from a franchise. And on the foreign-support question, any equipment or tradecraft that a self-funded exile group cannot plausibly account for.</p>
+          <p>If those start appearing consistently, the AUF has to be treated as a real addition to the anti-Taliban field, and the map of this conflict gets redrawn to include the south. If they don't, we are looking at a claims operation with good connections, and the story stays in Washington rather than Kandahar. Either way, I'd rather report which one it is than predict it. The record so far buys the AUF attention. It has not yet bought it belief.</p>
+        </div>
+
+        <div class="article-source">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+          Published on
+          <a href="https://insidergeo.substack.com/" target="_blank" rel="noopener">
+            GeoInsider Substack
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <div class="article-nav-bottom">
+          <a href="ceuta-watchers.html">← If the Watchers Were Real: Ceuta</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">Geo<span>Insider</span></div>
+        <div class="footer__copy">Independent geopolitical analysis</div>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="../index.html#case-studies">Case Studies</a>
+        <a href="../index.html#vision">Vision</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const btn = document.querySelector('[data-theme-toggle]');
+  const root = document.documentElement;
+  const stored = localStorage.getItem('gi-theme');
+  if(stored) root.setAttribute('data-theme', stored);
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('gi-theme', next);
+  });
+  const ham = document.querySelector('.nav__hamburger');
+  const mob = document.querySelector('.nav__mobile');
+  if(ham && mob) ham.addEventListener('click', () => {
+    const open = ham.getAttribute('aria-expanded') === 'true';
+    ham.setAttribute('aria-expanded', String(!open));
+    mob.classList.toggle('is-open', !open);
+  });
+})();
+</script>
+</body>
+</html>

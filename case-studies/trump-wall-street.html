@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Are We Looking at Trump’s Foreign Policy Through the Wrong Screen? — GeoInsider</title>
+  <meta property="og:title" content="Are We Looking at Trump’s Foreign Policy Through the Wrong Screen?" />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+.article-hero {
+  padding: var(--space-24) 0 var(--space-16);
+  border-bottom: 1px solid var(--color-divider);
+}
+.article-hero .article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+  transition: color var(--transition-interactive);
+}
+.article-hero .article-back:hover { color: var(--color-primary-hover); }
+.article-hero .article-back svg { flex-shrink: 0; }
+.article-tag {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.article-hero h1 {
+  font-size: var(--text-2xl);
+  line-height: 1.1;
+  margin-bottom: var(--space-6);
+  max-width: 800px;
+}
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+.article-meta .meta-sep { color: var(--color-divider); }
+.article-body {
+  padding: var(--space-16) 0 var(--space-24);
+}
+.article-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.article-lede {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-10);
+  border-bottom: 1px solid var(--color-divider);
+}
+.prose-section {
+  margin-bottom: var(--space-10);
+}
+.prose-section h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+  margin-top: var(--space-12);
+}
+.prose-section p {
+  font-size: var(--text-base);
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+}
+.prose-section p:last-child { margin-bottom: 0; }
+
+.pull-quote {
+  margin: var(--space-10) 0;
+  padding: var(--space-6) var(--space-8);
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-primary-subtle);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+.pull-quote p {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.stats-box {
+  margin: var(--space-8) 0;
+  padding: var(--space-6) var(--space-7);
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+}
+.stats-box h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-5);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-5) var(--space-6);
+}
+.stats-grid .stat-item .stat-value {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: var(--space-1);
+}
+.stats-grid .stat-item .stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  display: block;
+}
+
+.note-box {
+  margin: var(--space-8) 0;
+  padding: var(--space-6) var(--space-7);
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+}
+.note-box h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+.note-box p {
+  font-size: var(--text-sm);
+  line-height: 1.75;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+.note-box p:last-child { margin-bottom: 0; }
+
+.note-box ul { margin: 0 0 var(--space-4) var(--space-5); }
+.note-box li { font-size: var(--text-sm); line-height: 1.7; margin-bottom: var(--space-2); color: var(--color-text); }
+.prose-section p em { font-style: italic; }
+.article-source {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+.article-source a {
+  color: var(--color-primary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.article-source a:hover { color: var(--color-primary-hover); }
+.article-nav-bottom {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.article-nav-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: color var(--transition-interactive);
+}
+.article-nav-bottom a:hover { color: var(--color-primary-hover); }
+@media (max-width: 640px) {
+  .article-hero h1 { font-size: clamp(1.5rem, 5vw, 2rem); }
+  .article-meta { font-size: var(--text-xs); }
+  .pull-quote { padding: var(--space-5) var(--space-5); }
+}
+  </style>
+  <meta name="description" content="On October 9 Trump announced a Russian diesel deal and futures fell before any fuel arrived. A look at whether financial markets act as a feedback system in his foreign policy." />
+  <meta name="keywords" content="Trump, Russia, diesel, sanctions, Wall Street, markets, Ukraine, energy ceasefire" />
+  <link rel="canonical" href="https://www.insidergeo.com/case-studies/trump-wall-street.html" />
+  <meta property="og:url" content="https://www.insidergeo.com/case-studies/trump-wall-street.html" />
+  <meta property="og:site_name" content="GeoInsider" />
+  <meta property="article:published_time" content="2026-10-11" />
+  <meta property="og:description" content="On October 9 Trump announced a Russian diesel deal and futures fell before any fuel arrived. A look at whether financial markets act as a feedback system in his foreign policy." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@InsiderGeo" />
+  <meta name="twitter:title" content="Are We Looking at Trump’s Foreign Policy Through the Wrong Screen?" />
+  <meta name="twitter:description" content="On October 9 Trump announced a Russian diesel deal and futures fell before any fuel arrived. A look at whether financial markets act as a feedback system in his foreign policy." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Are We Looking at Trump’s Foreign Policy Through the Wrong Screen?",
+    "description": "On October 9 Trump announced a Russian diesel deal and futures fell before any fuel arrived. A look at whether financial markets act as a feedback system in his foreign policy.",
+    "datePublished": "2026-10-11",
+    "author": {"@type": "Organization", "name": "GeoInsider", "url": "https://www.insidergeo.com"},
+    "publisher": {"@type": "Organization", "name": "GeoInsider", "logo": {"@type": "ImageObject", "url": "https://www.insidergeo.com/img/logo.jpg"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.insidergeo.com/case-studies/trump-wall-street.html"},
+    "keywords": "Trump, Russia, diesel, sanctions, Wall Street, Ukraine"
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="GeoInsider Home">
+        <img src="../img/logo.jpg" alt="GeoInsider logo" width="36" height="36" style="border-radius:50%;display:block;flex-shrink:0;" />
+        <span class="nav__logo-text">Geo<span>Insider</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#case-studies">Case Studies</a></li>
+          <li><a href="../index.html#vision">Vision</a></li>
+          <li><a href="../index.html#reach">Media</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="https://buymeacoffee.com/geoinsider" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="btn-theme" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="https://x.com/InsiderGeo" target="_blank" rel="noopener" class="btn-cta" aria-label="Follow GeoInsider on X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.732-8.835L2.25 2.25h7.261l4.261 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Follow
+        </a>
+        <button class="nav__hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <div class="nav__mobile" role="list">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#case-studies">Case Studies</a>
+        <a href="../index.html#vision">Vision</a>
+        <a href="../index.html#reach">Media &amp; Reach</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://buymeacoffee.com/geoinsider" target="_blank" rel="noopener">Support</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="article-hero">
+    <div class="container container--default">
+      <a href="../index.html#case-studies" class="article-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        All Case Studies
+      </a>
+      <div class="article-tag">USA · Russia · Sanctions · Energy · Markets</div>
+      <h1>Are We Looking at Trump’s Foreign Policy Through the Wrong Screen?</h1>
+      <div class="article-meta">
+        <span>GeoInsider</span>
+        <span class="meta-sep">·</span>
+        <span>Oct 11, 2026</span>
+        <span class="meta-sep">·</span>
+        <span>Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="container container--default">
+      <div class="article-content">
+
+        <p class="article-lede">Wall Street, Russian diesel, and a different way of understanding Trump’s decisions</p>
+
+<div class="prose-section">
+<p>On Friday, October 9, Donald Trump announced that he had reached an agreement with Vladimir Putin to bring more Russian diesel onto American and international markets.</p>
+<p>Diesel futures fell almost immediately.</p>
+<p>The fuel hadn’t been delivered. There was still uncertainty about how much Russia could actually supply, when it would arrive, and whether the quantities involved would make much difference to the global shortage.</p>
+<p>But traders didn’t wait for those questions to be answered. The announcement was enough to move prices.</p>
+<p>I keep coming back to that sequence, because I think it tells us something interesting about how Trump approaches foreign policy.</p>
+<p>When we examine his decisions, we usually start with the geopolitical picture. We ask what Washington wants from Moscow, how a decision affects NATO, whether it strengthens American leverage, or what it means for the military balance.</p>
+<p>Those questions are essential. I’m not suggesting we abandon them.</p>
+<p>But I’ve increasingly wondered whether we’re missing something by treating financial markets as a secondary consideration.</p>
+<div class="pull-quote"><p>What if, to understand Trump, we need to spend less time looking at geopolitical maps and a little more time looking at Wall Street?</p></div>
+<p>I don’t mean simply that Trump wants a strong economy. Every American president wants growth, jobs and economic stability.</p>
+<p>I’m suggesting something more specific: that Trump may see international politics through a financial-market lens to an extent that conventional geopolitical analysis doesn’t always appreciate.</p>
+<p>Investor confidence, asset prices, financial conditions and market expectations may not just help him judge whether a policy is working. They may also influence how he conducts that policy in the first place.</p>
+<p>The Russian diesel agreement is a useful place to start exploring this idea.</p>
+<p>Not because it proves the theory. It doesn’t.</p>
+<p>But because it allows us to see how a decision that looks unusual through a traditional geopolitical lens can become considerably more understandable when we examine the economic and financial problem Trump appears to be trying to solve.</p>
+</div>
+
+<div class="prose-section">
+<h2>Start with the market, not the map</h2>
+<p>Before examining the geopolitical consequences of the Russian diesel agreement, consider the situation facing the White House.</p>
+<p>The American diesel market has been under extraordinary pressure.</p>
+<p>According to the U.S. Energy Information Administration, retail diesel averaged $6.29 per gallon in September 2026. By October 9, AAA data cited by Reuters put the nationwide average at approximately $6.28.</p>
+<p>The war with Iran has contributed to serious disruptions in global energy supplies, compounding an already difficult situation for refined petroleum products.</p>
+<p>And diesel is particularly important because its effects spread through much of the economy.</p>
+<p>Trucking companies need it to move goods. Farmers use it to operate machinery. Construction companies, industrial facilities and distribution networks depend on it.</p>
+<p>When diesel becomes significantly more expensive, the consequences don’t stop at the pump.</p>
+<p>Transport costs increase. Companies face higher operating expenses. Some pass those costs on to customers, adding to inflationary pressure.</p>
+<p>For investors, the problem becomes broader still.</p>
+<p>Persistent inflation complicates expectations about interest rates. Higher borrowing costs can affect investment, corporate profitability and equity valuations. Businesses with heavy fuel exposure may see their margins squeezed, while consumers facing higher living costs may reduce spending elsewhere.</p>
+<p>Of course, not every company suffers from higher energy prices. American oil producers and parts of the energy industry can benefit.</p>
+<p>Wall Street doesn’t have one single interest.</p>
+<p>But a prolonged energy shock creates uncertainty across asset classes, and uncertainty is something financial markets have to price.</p>
+<p>Now imagine approaching the Russian diesel question from that perspective.</p>
+<p>The immediate objective isn’t necessarily to reshape the strategic relationship between Washington and Moscow.</p>
+<p>It’s to relieve pressure on an important market.</p>
+<p>Or, more precisely, to create credible expectations that some of that pressure could ease.</p>
+<p>This is where Trump’s announcement becomes interesting.</p>
+<p>On October 9, he said Russia would immediately provide more than 300,000 metric tons of diesel, followed by another 500,000 tons in November and one million tons thereafter. He also mentioned the possibility of further shipments depending on Russian refinery capacity.</p>
+<p>These were announced commitments, not verified deliveries.</p>
+<p>The Treasury then issued General License 135, authorizing certain transactions involving Russian-origin diesel until April 7, 2027.</p>
+<p>That gave the announcement a concrete legal basis.</p>
+<p>The exemption was limited. It did not remove the broader sanctions on Russia, and it retained restrictions on transactions involving certain Russian sovereign accounts.</p>
+<p>Still, Washington had made a real policy adjustment.</p>
+<p>And here’s the point: <strong>from a market perspective, the announcement could start working before the diesel arrived.</strong></p>
+<p>Futures markets trade expectations about future supply and demand. If traders believe additional fuel will become available, prices can respond immediately, even when the physical supply situation hasn’t yet changed.</p>
+<p>After Trump’s announcement, New York Harbor diesel futures were reported to be trading roughly 4.5% lower.</p>
+<p>That doesn’t prove the agreement caused the entire movement, and it certainly doesn’t demonstrate that American consumers will see an equivalent reduction in retail prices.</p>
+<p>Other developments can influence markets during the same trading session.</p>
+<p>But the timing provides a concrete example of how political announcements can affect financial expectations.</p>
+<p>The president said more supply was coming. Traders repriced diesel.</p>
+<p>Whether the promised supplies eventually materialize is a separate question.</p>
+<p>Some energy analysts doubt the agreement will meaningfully improve global availability, noting that the announced volumes are relatively modest compared with normal Russian exports and international demand.</p>
+<p>That scepticism matters.</p>
+<p>The difference between changing market expectations and changing the underlying economy can be substantial.</p>
+<p>A price movement based on anticipated supply can reverse if the supply disappoints.</p>
+<p>For now, though, the episode illustrates a political possibility worth considering: <strong>an announcement can produce an immediate financial effect even when the economic results are uncertain and still months away.</strong></p>
+<p>For a president who pays close attention to markets, that immediate effect may have value in its own right.</p>
+</div>
+
+<div class="prose-section">
+<h2>Now look at the geopolitical cost</h2>
+<p>Once we understand the economic objective, we can return to the geopolitical consequences.</p>
+<p>For years, Western sanctions have aimed to constrain Russia’s access to revenue and raise the economic cost of its invasion of Ukraine.</p>
+<p>Ukraine’s campaign against Russian refineries follows a related, although operationally distinct, logic.</p>
+<p>Kyiv is trying to disrupt Russian fuel production, impose repair costs, complicate supply arrangements and force Moscow to devote resources to defending infrastructure.</p>
+<p>The results vary from one attack to another. Russian facilities can be repaired, production can shift between plants, and the effects on Russia’s military operations are not always directly observable.</p>
+<p>Still, the strategic rationale is clear.</p>
+<p>Ukraine is using the tools available to it to impose costs on an adversary with much larger military and economic resources.</p>
+<p>Trump is looking at some of those same refinery attacks and seeing a different problem.</p>
+<p>He has publicly argued that Ukrainian attacks are contributing to higher diesel prices, which are hurting American consumers and businesses.</p>
+<p>Kyiv disputes that account, pointing to the Middle Eastern war as a major cause of the fuel crisis.</p>
+<p>The distinction is important because the available evidence doesn’t establish that Ukrainian refinery strikes are the dominant explanation for America’s diesel shortage.</p>
+<p>Russia’s damaged refining capacity may be one element of the supply picture, but the conflict involving Iran has had much wider consequences for global energy flows.</p>
+<p>Nevertheless, Trump has pressured Kyiv to stop its refinery attacks while simultaneously pursuing additional diesel supply from Moscow.</p>
+<div class="pull-quote"><p>Through a conventional sanctions lens, this looks like a contradiction.</p></div>
+<p>Washington has spent years trying to increase economic pressure on Russia. It is now allowing certain Russian fuel transactions because restricted supply has become economically costly.</p>
+<p>But start with the financial-market problem, and the decision becomes easier to understand.</p>
+<p>Trump appears willing to adjust a sanctions instrument when its economic consequences conflict with other American priorities.</p>
+<p>That doesn’t tell us whether the choice will ultimately benefit the United States.</p>
+<p>It doesn’t tell us whether the benefits of additional diesel will outweigh any advantage Russia obtains from the transactions.</p>
+<p>And it doesn’t establish how much additional revenue Moscow will receive.</p>
+<p>Those questions depend on actual shipment volumes, prices, commercial arrangements and the broader effects of sanctions.</p>
+<p>What we can observe is the trade-off.</p>
+<p>Washington has chosen to permit some Russian diesel transactions despite the possible consequences for pressure on Moscow.</p>
+<p>For Ukraine, the implications go beyond the fuel itself.</p>
+<p>On October 11, Zelensky said Kyiv was prepared to stop attacking Russian refineries if Russia also stopped attacking Ukrainian energy infrastructure, with meaningful guarantees.</p>
+<p>That is a very different proposition from an unconditional Ukrainian suspension.</p>
+<p>Zelensky is offering to exchange one form of military pressure for protection against another.</p>
+<p>Trump subsequently announced what he described as an immediate energy ceasefire between Russia and Ukraine. At the time of that announcement, neither side had independently confirmed an operative agreement, and Kyiv was still seeking clarification.</p>
+<p>An announcement, once again, was running ahead of the operational reality.</p>
+<p>There are therefore two separate questions.</p>
+<p>One concerns the price of diesel.</p>
+<p>The other concerns whether Washington can use economic incentives and pressure to produce a negotiated arrangement between Russia and Ukraine.</p>
+<p>These objectives might be compatible. An energy agreement could reduce attacks on infrastructure while improving market expectations.</p>
+<p>But they could also conflict.</p>
+<p>If Russia receives sanctions relief without making equivalent concessions, the arrangement could weaken American leverage. If the agreement produces a verifiable reciprocal ceasefire, the geopolitical calculation would be different.</p>
+<p>We don’t yet know which outcome will emerge.</p>
+<p>That uncertainty is precisely why I wouldn’t call the diesel agreement either a strategic success or a strategic failure at this stage.</p>
+<p>What interests me is the way economic considerations appear to have influenced the choice of instrument.</p>
+</div>
+
+<div class="prose-section">
+<h2>Wall Street as a feedback system</h2>
+<p>This brings me to the larger idea.</p>
+<p>I think we often treat the stock market as a scoreboard for American presidents.</p>
+<p>The economy improves, markets rise, and the administration points to that performance as evidence that its policies are working.</p>
+<p>The economy deteriorates, investors become nervous, and the White House faces criticism.</p>
+<p>In that picture, markets primarily measure the consequences of political decisions.</p>
+<p>But markets can do something else.</p>
+<p>They can influence the decisions themselves.</p>
+<p>Think about the difference.</p>
+<p>A scoreboard tells you the result.</p>
+<p>A feedback system gives you information that can change what you do next.</p>
+<p>If a president introduces a policy, sees an unusually severe financial reaction and subsequently changes course, markets may have become part of the decision-making process.</p>
+<p>That doesn’t mean investors are issuing instructions to the White House.</p>
+<p>It means financial prices can communicate the economic costs, perceived risks and expectations surrounding a policy faster than many conventional economic indicators.</p>
+<p>A quarterly growth estimate arrives long after the decisions that helped produce it.</p>
+<p>Financial markets can reprice in minutes.</p>
+<p>Treasury yields, stock indices, credit spreads and commodity futures provide a continuous stream of information about how investors are interpreting developments.</p>
+<p>The relationship is imperfect. Markets can overreact, misunderstand policy, or change direction for reasons unrelated to a president’s decisions.</p>
+<p>But they provide a form of immediate feedback that political leaders may find difficult to ignore.</p>
+<p>This connection between political authority and financial power is not a new subject.</p>
+<p>In <em>States and Markets</em>, Susan Strange examined the relationship between states and the structures of economic power, including finance. Her work helps explain why financial markets shouldn’t be treated as an external backdrop to international politics.</p>
+<p>Robert Putnam’s <em>Diplomacy and Domestic Politics: The Logic of Two-Level Games</em> approached the issue differently. His argument was that international negotiations are shaped by domestic political constraints and the need to secure support at home.</p>
+<p>Neither framework tells us exactly what Trump is thinking.</p>
+<p>But both challenge the idea that foreign policy can be understood independently of the economic and political environment in which it is made.</p>
+<p>What may distinguish Trump is the visibility of the financial dimension in his public language and his transactional approach to negotiation.</p>
+<p>He frequently describes international relationships in terms of deals, costs, leverage and immediate returns.</p>
+<p>That style is usually called transactional diplomacy.</p>
+<p>I think the description is useful, although it leaves one question unanswered.</p>
+<p>How does Trump decide whether a transaction has worked?</p>
+<p>A conventional strategic assessment might emphasize changes in military leverage, alliance cohesion, diplomatic concessions or an adversary’s behaviour.</p>
+<p>A financially oriented assessment would also place considerable weight on prices, investment expectations, market confidence and the perceived economic consequences of an agreement.</p>
+<p>Those measures can point in different directions.</p>
+<p>A deal may reassure investors while creating new problems for an ally.</p>
+<p>A sanction may weaken an adversary while raising prices at home.</p>
+<p>A military operation may achieve its immediate objective while producing an expensive economic shock.</p>
+<p>The interesting question isn’t whether Trump ignores the first set of considerations.</p>
+<p>He plainly doesn’t.</p>
+<p>It’s whether the second set has an unusually prominent role in determining when he decides to maintain, modify or abandon a policy.</p>
+<p>And we have at least two other cases worth examining.</p>
+</div>
+
+<div class="prose-section">
+<h2>The tariff reversal and the Iran war</h2>
+<p>The first case is April 2025.</p>
+<p>After Trump introduced sweeping tariffs, financial markets experienced substantial turbulence. American equities fell sharply, and concerns spread to the U.S. Treasury market.</p>
+<p>On April 9, Trump announced a 90-day pause on many country-specific tariff increases, while maintaining a general tariff and escalating the trade confrontation with China.</p>
+<p>The S&amp;P 500 rose approximately 9.5% that day.</p>
+<p>It was a striking market response.</p>
+<p>But we need to be careful about what it proves.</p>
+<p>The tariff announcement itself helped produce the rally. We cannot then use the rally alone as evidence that Trump made the decision because he wanted stocks to rise.</p>
+<p>That would be circular reasoning.</p>
+<p>There is, however, credible reporting that the financial turmoil — including stress in government bonds — influenced the administration’s calculations. Treasury Secretary Scott Bessent also maintained that negotiations and adjustments were already part of the strategy.</p>
+<p>Both possibilities deserve consideration.</p>
+<p>The episode could reflect a planned bargaining tactic, a reaction to financial stress, or a combination of the two.</p>
+<p>What makes it relevant is the sequence.</p>
+<p>Trump demonstrated that he was willing to tolerate substantial market losses while pursuing trade objectives. When financial conditions became particularly strained, the administration changed its approach.</p>
+<p>That pattern doesn’t fit the idea of a president who simply tries to keep stock prices rising every day.</p>
+<p>It fits a more nuanced possibility: <strong>markets may be less important in deciding where Trump starts than in influencing how far he is prepared to go.</strong></p>
+<p>Financial pressure can become a constraint on the duration or intensity of a policy.</p>
+<p>The Iran war provides an important comparison — and a challenge to any overly simple version of my argument.</p>
+<p>The conflict has produced major economic disruption. Energy supplies have been affected, shipping has faced serious restrictions, and fuel prices have risen sharply.</p>
+<p>These are hardly the conditions that would be chosen by a president interested exclusively in pleasing investors.</p>
+<p>Trump has also framed the military campaign around strategic objectives, particularly preventing Iran from acquiring a nuclear weapon.</p>
+<p>That cannot simply be dismissed.</p>
+<p>But consider his public remarks on June 23, 2026.</p>
+<p>Asked about the war’s cost and whether Americans supported it, Trump defended the campaign on national-security grounds.</p>
+<p>In the same answer, he pointed to financial-market performance and falling oil prices.</p>
+<p>His wording was revealing:</p>
+<div class="pull-quote"><p>“Our stock market is through the roof, and oil prices are tumbling.”</p></div>
+<p>Those remarks are preserved in the official presidential transcript.</p>
+<p>I wouldn’t interpret them as proof that the war was undertaken for financial reasons.</p>
+<p>They show something narrower, but still significant.</p>
+<p>Trump was using the condition of financial markets and oil prices as part of his explanation of how the international situation was developing.</p>
+<p>Security outcomes and market outcomes appeared together in the same assessment.</p>
+<p>That doesn’t make him unique among presidents. American leaders have always been attentive to the economic consequences of war.</p>
+<p>But the frequency and prominence with which Trump invokes market performance make it worth asking whether financial indicators serve as a particularly important reference point for him.</p>
+<p>The tariff and Iran cases also prevent us from making the argument too absolute.</p>
+<p>Trump can pursue policies that are costly to financial markets.</p>
+<p>The question is what happens when those costs become difficult to sustain.</p>
+<p>Does he maintain the strategy? Does he alter its implementation? Does he look for a transaction that can reduce uncertainty? Or does he conclude that the strategic objective justifies accepting the economic damage?</p>
+<p>Those choices, repeated across different crises, would tell us much more than any single market rally.</p>
+</div>
+
+<div class="prose-section">
+<h2>The explanations we shouldn’t ignore</h2>
+<p>There is an obvious objection to everything I’ve argued so far.</p>
+<p>Perhaps Trump isn’t thinking primarily about Wall Street at all.</p>
+<p>Perhaps he’s thinking about voters.</p>
+<p>The congressional elections are scheduled for November 3, and diesel prices have become politically difficult for the administration.</p>
+<p>High fuel costs affect farmers, trucking companies, small businesses and households. Bringing prices down could provide a visible political benefit, whether or not stock markets respond favourably.</p>
+<p>This is a serious alternative explanation.</p>
+<p>In fact, when Trump announced the Russian diesel arrangement, he emphasized lower prices for American farmers, ranchers and truckers.</p>
+<p>His own public explanation was directed primarily at the real economy, not at hedge funds or equity investors.</p>
+<p>That deserves weight.</p>
+<p>Another possibility is straightforward energy-crisis management.</p>
+<p>The confrontation with Iran has created extraordinary pressure on international supplies. Under those circumstances, Washington might consider a narrowly targeted sanctions exemption regardless of its broader approach to Russia.</p>
+<p>A third possibility is diplomatic leverage.</p>
+<p>The diesel agreement may be part of a wider attempt to pressure Kyiv, engage Moscow and encourage a limited arrangement over attacks on energy infrastructure.</p>
+<p>Such an approach would be consistent with Trump’s bargaining style without requiring Wall Street to be the dominant consideration.</p>
+<p>I don’t think we should choose between these explanations prematurely.</p>
+<p>They can coexist.</p>
+<p>Lower diesel prices could help consumers, relieve pressure on businesses, improve market sentiment and offer political benefits ahead of an election.</p>
+<p>The same decision might also support a diplomatic initiative.</p>
+<p>The problem is that these effects don’t establish which objective carried the greatest weight inside the White House.</p>
+<p>And this is where I would draw a firm line between my interpretation and the evidence.</p>
+<p>We have public statements, official documents, market reactions and a sequence of policy decisions.</p>
+<p>We don’t have a complete record of the internal deliberations that produced them.</p>
+<p>So the claim that Trump is particularly sensitive to financial markets is an analytical hypothesis.</p>
+<p>It is not a verified account of his private motivations.</p>
+<p>To investigate it properly, I would look for repeated patterns rather than isolated coincidences.</p>
+<p>Do policy changes follow episodes of severe financial stress even when the geopolitical situation hasn’t materially changed?</p>
+<p>Does the administration prefer measures that offer faster market relief over alternatives that might produce better strategic outcomes over a longer period?</p>
+<p>Do officials refer to particular financial indicators when defending or reconsidering decisions?</p>
+<p>And perhaps most importantly, what happens when those indicators point in the opposite direction from a declared strategic objective?</p>
+<p>A rigorous study would also need to distinguish the stock market from other financial markets.</p>
+<p>Treasury yields are not the S&amp;P 500. Diesel futures are not investor confidence. A decline in commodity prices may help much of the economy while hurting parts of the energy sector.</p>
+<p>Treating all of them as a single Wall Street response would weaken the argument.</p>
+<p>We would also have to account for reverse causation.</p>
+<p>Government decisions move markets. Markets may influence government decisions. Often the two processes occur together.</p>
+<p>That makes it difficult to infer motivation from timing alone.</p>
+<p>The evidence that would most strengthen my interpretation would be a recurring pattern of policy adjustments following financial stress, supported by statements or accounts showing that market conditions influenced the decisions.</p>
+<p>The evidence that would weaken it would be a consistent willingness to maintain strategically important policies despite prolonged market pressure, without those pressures materially influencing subsequent choices.</p>
+<p>The tariff record already provides an example of Trump accepting substantial financial disruption.</p>
+<p>That’s a useful limitation, not something the argument should try to explain away.</p>
+</div>
+
+<div class="prose-section">
+<h2>Why this matters beyond Trump</h2>
+<p>There is a broader geopolitical implication here.</p>
+<p>Economic sanctions depend not only on how much pressure they impose on the target, but also on how long the country imposing them is prepared to absorb the consequences.</p>
+<p>This is particularly important when sanctions involve energy and other internationally traded commodities.</p>
+<p>Restricting supply can raise prices well beyond the sanctioned country. Those higher prices may then create economic and political difficulties for the governments enforcing the restrictions.</p>
+<p>An adversary can take those constraints into account.</p>
+<p>If Moscow believes that a sufficiently tight diesel market will eventually encourage Washington to relax restrictions, that expectation could influence how Russia approaches negotiations.</p>
+<p>I am not suggesting that this is necessarily what Putin calculated in the October agreement.</p>
+<p>We don’t have evidence for that conclusion.</p>
+<p>But the incentive is worth considering.</p>
+<p>Financial sensitivity can shape bargaining power. If one party is perceived as less willing to endure short-term economic pain, the other may calculate that waiting will improve its position.</p>
+<p>Allies face a different problem.</p>
+<p>Ukraine has to make military decisions based partly on expectations about the durability of Western support and economic pressure on Russia.</p>
+<p>European governments must also assess whether American sanctions commitments will remain in place during future economic shocks.</p>
+<p>A limited exemption doesn’t mean Washington has abandoned its alliances or its broader Russia policy.</p>
+<p>But it introduces uncertainty about the conditions under which those commitments might be adjusted.</p>
+<p>That uncertainty can itself affect strategic calculations.</p>
+<p>There is also a potentially more favourable interpretation of Trump’s method.</p>
+<p>If Washington can use commercial incentives, market access or selective sanctions relief to obtain meaningful concessions, such tools may provide diplomatic leverage without requiring additional military escalation.</p>
+<p>A transaction isn’t inherently incompatible with a long-term strategy.</p>
+<p>The question is what Washington receives in return, whether the commitments are enforceable, and whether the economic benefit persists after the initial market reaction fades.</p>
+<p>A market-friendly announcement and a strategically successful agreement are not necessarily the same thing.</p>
+<p>They may reinforce each other.</p>
+<p>They may also come apart.</p>
+<p>For analysts, this suggests a practical change in how we follow American foreign policy.</p>
+<p>We should continue looking at military deployments, negotiations, sanctions, alliance relationships and the calculations of adversaries.</p>
+<p>But financial conditions deserve attention alongside them.</p>
+<p>Not because every market movement tells us what Trump will do next.</p>
+<p>It doesn’t.</p>
+<p>Rather, financial indicators may help explain why Washington becomes more flexible at one moment and less flexible at another, even when the underlying geopolitical situation has changed very little.</p>
+<p>This is where I think conventional geopolitical analysis can sometimes miss part of the story.</p>
+<p>We are accustomed to asking how markets will react to foreign policy.</p>
+<p>We should also be asking how foreign policy might react to markets.</p>
+</div>
+
+<div class="prose-section">
+<h2>My reading of Trump</h2>
+<p>I don’t see Trump as a president who ignores geopolitics.</p>
+<p>The evidence doesn’t support that interpretation.</p>
+<p>His administration has made decisions involving military force, trade confrontation and international pressure that imposed substantial economic costs.</p>
+<p>Clearly, financial markets are not the only consideration.</p>
+<p>But I also don’t think Wall Street is merely a convenient scoreboard that Trump likes to mention when prices are rising.</p>
+<p>There may be something more consequential at work.</p>
+<p>His approach to international politics appears unusually responsive to financial signals, especially when those signals concern the costs of maintaining a particular policy.</p>
+<p>I would distinguish between a president who uses the markets to demonstrate success and one who also uses them to evaluate whether the next move should change.</p>
+<p>Trump may do both.</p>
+<p>The Russian diesel agreement illustrates the possibility.</p>
+<p>Faced with an expensive energy problem, Washington sought additional supply through a limited exemption involving Russia. The announcement moved diesel futures before the actual supplies could be verified. Meanwhile, the geopolitical consequences for Ukraine and Western sanctions remained unresolved.</p>
+<p>That sequence does not tell us everything about Trump’s motives.</p>
+<p>But it does suggest that financial-market considerations belong much closer to the centre of our analysis.</p>
+<p>The April 2025 tariff reversal offers another example of markets potentially constraining a political strategy. His remarks during the Iran war show how naturally financial performance enters his public evaluation of international events.</p>
+<p>None of these cases is conclusive on its own.</p>
+<p>Taken together, they raise a question I think deserves more attention.</p>
+<p>Perhaps we’ve been looking for a single, consistent geopolitical doctrine behind Trump’s decisions when part of the consistency lies elsewhere.</p>
+<p>Not necessarily in a fixed position toward Russia, China, Iran or Europe.</p>
+<p>But in a method of evaluating international choices through their economic costs, financial consequences and capacity to produce a favourable transaction.</p>
+<p>Such a method would have both advantages and risks.</p>
+<p>It could make American diplomacy flexible and responsive to changing economic conditions.</p>
+<p>It could also make policy commitments harder for allies and adversaries to interpret, particularly when financial incentives change faster than strategic realities.</p>
+<p>Whether it ultimately strengthens or weakens American leverage would depend on the terms and durability of the agreements it produces.</p>
+<p>For now, I wouldn’t claim to have identified the single principle governing Trump’s foreign policy.</p>
+<p>I doubt such a principle exists.</p>
+<p>But I increasingly think that <strong>Wall Street may be more than a place where the consequences of his decisions become visible. It may be part of the feedback he uses to decide what comes next.</strong></p>
+<p>And that changes the questions we should be asking.</p>
+<p>The next time Trump makes a foreign-policy decision that seems difficult to explain through conventional strategic logic, I’ll still look at the military balance, the diplomatic negotiations and the interests of the countries involved.</p>
+<p>But I’ll also look at what has been happening in financial markets.</p>
+<p>What are energy prices doing? Are Treasury yields rising? Are investors becoming more nervous? Has the administration suddenly started talking about a deal?</p>
+<p>There may be no connection.</p>
+<p>Sometimes there won’t be.</p>
+<p>But sometimes the market reaction could explain why the timing of a decision makes more sense than its geopolitics initially suggest.</p>
+<div class="pull-quote"><p>We’re looking at the map. Trump may be looking at the ticker.</p></div>
+<p>And perhaps understanding his foreign policy requires learning to read both.</p>
+</div>
+
+<div class="note-box">
+<h3>Sources and further reading</h3>
+<p><strong>Primary documents and economic data</strong></p>
+<ul>
+<li>U.S. Treasury / OFAC — General License 135, October 9, 2026. The legal scope, duration and exceptions of the authorization concerning Russian-origin diesel.</li>
+<li>U.S. Energy Information Administration — Short-Term Energy Outlook, October 2026. American diesel prices, refined-product supply conditions and energy-market forecasts.</li>
+<li>Administration of Donald J. Trump — Remarks in Reading, Pennsylvania, June 23, 2026. Official transcript of Trump’s comments concerning the Iran war, the stock market and oil prices.</li>
+</ul>
+<p><strong>Contemporary reporting</strong></p>
+<ul>
+<li>Reuters — Trump says Russia to supply diesel to U.S. and global markets, October 9, 2026.</li>
+<li>Wall Street Journal — Diesel prices fall after Trump posts about a deal with Russia, October 9, 2026.</li>
+<li>Financial Times — Can Russia meet Trump’s diesel demands?, October 11, 2026.</li>
+<li>Reuters — Trump announces Ukraine energy ceasefire, surprising Zelensky, October 11, 2026.</li>
+<li>Reuters — U.S. stocks surge as Trump pauses tariffs, April 9, 2025.</li>
+<li>Reuters — Amid turmoil over tariffs, Bessent rises in Trump trade world, April 10, 2025.</li>
+</ul>
+<p><strong>Academic references</strong></p>
+<ul>
+<li>Susan Strange, <em>States and Markets</em> (1988). International political economy and the relationship between financial power and political authority.</li>
+<li>Robert D. Putnam, <em>Diplomacy and Domestic Politics: The Logic of Two-Level Games</em>, <em>International Organization</em>, 42(3), 1988, pp. 427–460.</li>
+</ul>
+</div>
+<div class="note-box">
+<h3>Note on method</h3>
+<p>This essay advances an interpretation of publicly observable decisions, statements and financial-market responses. It does not claim to establish Trump’s private motivations. In particular, the relationship between market movements and policy decisions should not be confused with proven causation.</p>
+</div>
+
+<div class="article-source">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+          Originally published on
+          <a href="https://insidergeo.substack.com/p/are-we-looking-at-trumps-foreign" target="_blank" rel="noopener">
+            GeoInsider Substack
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <div class="article-nav-bottom">
+          <a href="yemen-explained.html">← Yemen Explained: How the Houthis Ended Up Sitting on the World’s Other Oil Chokepoint</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">Geo<span>Insider</span></div>
+        <div class="footer__copy">Independent geopolitical analysis</div>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="../index.html#case-studies">Case Studies</a>
+        <a href="../index.html#vision">Vision</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const btn = document.querySelector('[data-theme-toggle]');
+  const root = document.documentElement;
+  const stored = localStorage.getItem('gi-theme');
+  if(stored) root.setAttribute('data-theme', stored);
+  if(btn) btn.addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('gi-theme', next);
+  });
+  const ham = document.querySelector('.nav__hamburger');
+  const mob = document.querySelector('.nav__mobile');
+  if(ham && mob) ham.addEventListener('click', () => {
+    const open = ham.getAttribute('aria-expanded') === 'true';
+    ham.setAttribute('aria-expanded', String(!open));
+    mob.classList.toggle('is-open', !open);
+  });
+})();
+</script>
+</body>
+</html>

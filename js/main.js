@@ -180,3 +180,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }, 3000);
   });
 })();
+
+/* === COPYRIGHT YEAR — auto-updates on January 1 === */
+(function(){
+  document.querySelectorAll('.js-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
+})();
